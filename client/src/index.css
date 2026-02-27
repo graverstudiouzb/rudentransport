@@ -302,23 +302,35 @@
   }
 
   .animate-fade-in-up {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation-name: fadeInUp;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     will-change: transform, opacity;
   }
 
   .animate-slide-in-right {
-    animation: slideInRight 0.6s ease-out forwards;
+    animation-name: slideInRight;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     will-change: transform, opacity;
   }
 
   .animate-slide-in-left {
-    animation: slideInLeft 0.6s ease-out forwards;
+    animation-name: slideInLeft;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     will-change: transform, opacity;
   }
 
   /* Stagger children animations */
   .stagger-children > * {
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation-name: fadeInUp;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
     will-change: transform, opacity;
   }
 
@@ -360,7 +372,9 @@
   }
 
   .btn-pulse:active::after {
-    animation: ripple 0.6s ease-out;
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
   }
 
   @keyframes ripple {
@@ -374,7 +388,10 @@
   /* Scroll-triggered animations */
   .scroll-fade-in {
     opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
   }
 
   /* Smooth transitions */
@@ -475,7 +492,10 @@
   }
 
   .animate-spin {
-    animation: spin 1s linear infinite;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
   }
 
   /* Gradient text utility */
