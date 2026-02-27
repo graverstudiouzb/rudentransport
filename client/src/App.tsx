@@ -39,7 +39,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <CookieBanner />
-          <LeadMagnetPopup />
+          {/* <LeadMagnetPopup /> */}
           <WhatsAppWidget />
           <Router />
         </TooltipProvider>
