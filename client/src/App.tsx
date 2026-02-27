@@ -5,6 +5,9 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import LeadMagnetPopup from "./components/LeadMagnetPopup";
+import WhatsAppWidget from "./components/WhatsAppWidget";
+import StickyPhoneCTA from "./components/StickyPhoneCTA";
 
 
 function Router() {
@@ -33,6 +36,9 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <LeadMagnetPopup />
+          <WhatsAppWidget />
+          <StickyPhoneCTA />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

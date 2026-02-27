@@ -69,32 +69,17 @@ export default function Home() {
             />
             <span className="text-xl font-bold text-foreground">RUDEN</span>
           </div>
-          <div className="flex items-center gap-6">
-            <a
-              href="#services"
-              className="text-sm text-muted-foreground hover:text-foreground transition"
-            >
-              Leistungen
+          <div className="hidden md:flex items-center gap-6">
+            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition">Leistungen</a>
+            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition">Prozess</a>
+            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition">Kontakt</a>
+          </div>
+          <div className="flex items-center gap-3">
+            <a href="tel:+491766044540" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition text-sm font-medium">
+              <Phone className="h-4 w-4" />
+              <span className="hidden sm:inline">+49 176 60445403</span>
             </a>
-            <a
-              href="#process"
-              className="text-sm text-muted-foreground hover:text-foreground transition"
-            >
-              Prozess
-            </a>
-            <a
-              href="#contact"
-              className="text-sm text-muted-foreground hover:text-foreground transition"
-            >
-              Kontakt
-            </a>
-            <Button
-              variant="default"
-              size="sm"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
-            >
-              Anfrage
-            </Button>
+            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">Anfrage</Button>
           </div>
         </div>
       </nav>
@@ -110,13 +95,11 @@ export default function Home() {
                 </span>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold leading-tight animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-                Zugang wo andere
-                <span className="block text-primary"> nicht können</span>
+                Sichere Übergabe
+                <span className="block text-primary">überall in Deutschland</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                Kompakte Fahrzeuge für enge Straßen, Treppen und komplexe
-                Zugangsituationen. Diskrete Planung. Sichere Übergabe.
-                Dokumentierte Prozesskette.
+                Werttransporte für Orte, die große Trucks nicht erreichen. Treppen bis 5. Stock • Innenhöfe • Privatobjekte • Versichert & dokumentiert.
               </p>
               <div className="flex gap-4 pt-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 <Button
@@ -272,8 +255,8 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-3">
             {[
               { label: "Bundesweit", value: "Alle Bundesländer" },
-              { label: "Erfahrung", value: "Spezialist seit Jahren" },
-              { label: "Zuverlässigkeit", value: "100% Erfolgsquote" },
+              { label: "Versichert", value: "Vollständig dokumentiert" },
+              { label: "Diskret", value: "Vertrauliche Abwicklung" },
             ].map((stat, idx) => (
               <div key={idx} className="flex items-center gap-4">
                 <CheckCircle2 className="h-8 w-8 text-secondary flex-shrink-0" />
