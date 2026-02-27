@@ -14,21 +14,21 @@ const CASES = [
     challenge: "5-stöckiges Altbau-Treppenhaus, enge Kurven, keine Aufzüge",
     solution: "Spezialverpackung + Handtransport über 5 Etagen",
     result: "Sichere Übergabe ohne Beschädigungen, diskret dokumentiert",
-    icon: "🏢",
+    icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/MBKdasudGWykGqnx.png",
   },
   {
     title: "Werttransport Innenhof München",
     challenge: "Zugang nur über enge Innenhofpassage (1,2m breit)",
     solution: "Kompakte Fahrzeuge + erfahrenes Team",
     result: "Pünktliche Übergabe, volle Dokumentation",
-    icon: "🏠",
+    icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/GHYtLwxkQNpAPVSe.png",
   },
   {
     title: "Privatobjekt Schwarzwald",
     challenge: "Waldgrundstück, unbefestigte Zufahrt, schwieriger Zugang",
     solution: "Spezialfahrzeuge + Geländeerfahrung",
     result: "Erfolgreiche Übergabe an schwer erreichbarem Ort",
-    icon: "🌲",
+    icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/nuZGXsWTlRdaQhHC.png",
   },
 ];
 
@@ -79,7 +79,13 @@ export default function CaseStudies() {
               }}
             >
               {/* Icon */}
-              <div className="text-4xl mb-4">{caseStudy.icon}</div>
+              <div className="mb-4 h-16 w-16 flex items-center justify-center">
+                {caseStudy.icon.startsWith('http') ? (
+                  <img src={caseStudy.icon} alt={caseStudy.title} className="w-full h-full object-contain" loading="lazy" />
+                ) : (
+                  <span className="text-4xl">{caseStudy.icon}</span>
+                )}
+              </div>
 
               {/* Title */}
               <h3 className="text-xl font-semibold text-foreground mb-4">

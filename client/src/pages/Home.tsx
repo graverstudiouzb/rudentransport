@@ -156,23 +156,23 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 stagger-children">
             {[
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/rjCmNKnWhIEmxWxr.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/uSpezitRvDHxeNFB.png",
                 title: "Komplexe Zugänge",
                 description:
                   "Enge Straßen, Treppen, Innenhöfe – wir finden immer einen Weg",
               },
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/AcCyYMybYpgwGnKH.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/twVNywBYByEHHaWV.png",
                 title: "Diskrete Planung",
                 description: "Vertrauliche Abwicklung nach Ihren Anforderungen",
               },
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/SVqOUzJfiMZlXlfg.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/XVLJVIqvwjILivlM.png",
                 title: "Dokumentation",
                 description: "Vollständige Prozesskette mit Übergabeprotokoll",
               },
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/pbZeHzvcalRWszfa.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/kchYzzkaGIWQlIeS.png",
                 title: "Schnelle Abwicklung",
                 description: "Effiziente Planung und zuverlässige Durchführung",
               },
@@ -213,10 +213,10 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-4" ref={processRef}>
             {[
-              { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation", icon: "📋" },
-              { step: "2", title: "Planung", desc: "Wir planen die optimale Route", icon: "🗺️" },
-              { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung", icon: "🚚" },
-              { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe", icon: "✅" },
+              { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/dgvlpYyukfyKQWCp.png" },
+              { step: "2", title: "Planung", desc: "Wir planen die optimale Route", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/vaWAnjjzJWCpRrMG.png" },
+              { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/euIlRjWXUURwRKud.png" },
+              { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/jTUNZMlYOfXkLEOL.png" },
             ].map((item, idx) => (
               <div 
                 key={idx} 
@@ -229,7 +229,11 @@ export default function Home() {
               >
                 <div className="flex flex-col items-center">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <span className="text-4xl">{item.icon}</span>
+                    {item.icon.startsWith('http') ? (
+                      <img src={item.icon} alt={item.title} className="w-16 h-16 object-contain" loading="lazy" />
+                    ) : (
+                      <span className="text-4xl">{item.icon}</span>
+                    )}
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
                   <p className="text-sm text-muted-foreground text-center leading-relaxed">
