@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone, Mail, Building2, Lock, FileText, Zap } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="container flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <img
-              src="https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/9S527RyJK7A5dBhzFAKHXt-img-1_1772170968000_na1fn_cnVkZW4tbG9nbw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdEp6aUlNWDlNcTdaejNLZnRCRFg3bi9zYW5kYm94LzlTNTI3UnlKSzdBNWRCaHpGQUtIWHQtaW1nLTFfMTc3MjE3MDk2ODAwMF9uYTFmbl9jblZrWlc0dGJHOW5idy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=HulXV2rlxsjxAONNVsxQ6i3kqaJ7kQ5BOZZExlHj1CgNUdcGg5BkqQKTs9IF0tVkVI~QesZxNjwH8PS-nlkGIh~CcSfU5LKRCYXQRIoUsIexPawaufI5iHlX9yTts--n75W-52sKhGyuogAs1fdkMoVU7nD9tzcCejTDXmKNKvCrqsQIDSur1MtoiWeh2psh-TGzZYbvjwPXG-avSqP4csQX6369ltHsP12VojsnbKphNaDS3TyKXi5SZJjr3UzgtGYrfJGEW-ZJB6cJox1uKe48vfxvJjRXKCqIpXnS7W~Jhm8u~fnjOtw2Sx8b1CBSwEo2Tnev84En0WdhRdLqZQ__"
+              src="https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/B4zjoWP8EpqKYG5i9e7xz3_1772171199212_na1fn_cnVkZW4tbG9nby10cmFuc3BhcmVudA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdEp6aUlNWDlNcTdaejNLZnRCRFg3bi9zYW5kYm94L0I0empvV1A4RXBxS1lHNWk5ZTd4ejNfMTc3MjE3MTE5OTIxMl9uYTFmbl9jblZrWlc0dGJHOW5ieTEwY21GdWMzQmhjbVZ1ZEEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ZjhSjccH4a3Q~~ald41sKUsg~U48xUGFosn27FK2Oa6EEM-5PNFhYnCQ1ecNPlCQuG3Ed80YB8ruhxDlYTdu4HGA2gisDq3FrMnvanaqli5he-Bk0LuHoJ04oskA5BVSebUz6MSKZLCE~uxZxsw5zIp2DHifh2RdZbFmlALLVldBYZ-zx0e9widH6c8DatR0A~-HDZTLQerPMJZAiv7F9EUzJPaG5tYb5La5bcLxEgQ1C2xFGqf8A~1UuaZxH796xzGC7EE0EHp13cSMrydeDWC3JJCwd3D2YhwSq7L8MRNDSGk4llRH4ZtMnqsmoFnZ1q5tK4Yda6YSXtZ16iVXMA__"
               alt="RUDEN TRANSPORT"
               className="h-12 w-auto"
             />
@@ -156,41 +156,35 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 stagger-children">
             {[
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/nEjrd5XY2TglqO3ZBjXvWn-img-3_1772164516000_na1fn_aWNvbi1uYXJyb3ctYWNjZXNz.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: Building2,
                 title: "Komplexe Zugänge",
                 description:
                   "Enge Straßen, Treppen, Innenhöfe – wir finden immer einen Weg",
               },
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/nEjrd5XY2TglqO3ZBjXvWn-img-5_1772164511000_na1fn_aWNvbi1kaXNjcmV0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: Lock,
                 title: "Diskrete Planung",
                 description: "Vertrauliche Abwicklung nach Ihren Anforderungen",
               },
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/eQ8HnUO5owD7pn0SJs22Nh-img-4_1772164563000_na1fn_aWNvbi1kb2N1bWVudGF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: FileText,
                 title: "Dokumentation",
                 description: "Vollständige Prozesskette mit Übergabeprotokoll",
               },
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/eQ8HnUO5owD7pn0SJs22Nh-img-5_1772164583000_na1fn_aWNvbi1zcGVlZA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: Zap,
                 title: "Schnelle Abwicklung",
                 description: "Effiziente Planung und zuverlässige Durchführung",
               },
-            ].map((service, idx) => (
+            ].map((service, idx) => {
+              const IconComponent = service.icon;
+              return (
                <Card
                 key={idx}
                 className="p-6 bg-background border-border hover:border-primary/50 transition group card-hover"
               >
-                <div className="mb-4 h-16 w-16">
-                  <img
-                    src={service.icon}
-                    alt={service.title}
-                    className="w-full h-full object-contain"
-                    loading="lazy"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22%3E%3Crect fill=%22%23070A12%22 width=%2264%22 height=%2264%22/%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2220%22 fill=%22%2300D9FF%22/%3E%3C/svg%3E';
-                    }}
-                  />
+                <div className="mb-4 h-16 w-16 flex items-center justify-center rounded-lg bg-primary/10">
+                  <IconComponent className="w-8 h-8 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition">
                   {service.title}
@@ -199,7 +193,8 @@ export default function Home() {
                   {service.description}
                 </p>
               </Card>
-            ))}
+            );
+            })}
           </div>
         </div>
       </section>
