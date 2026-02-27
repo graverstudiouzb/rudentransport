@@ -43,6 +43,28 @@
 }
 
 :root {
+  /* TYPOGRAPHY SCALE */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --text-display-xl: clamp(2.5rem, 5vw, 4rem);
+  --text-display-lg: clamp(2rem, 4vw, 3rem);
+  --text-h1: clamp(2rem, 3vw, 2.5rem);
+  --text-h2: clamp(1.5rem, 2.5vw, 2rem);
+  --text-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --text-body-lg: clamp(1.125rem, 1.5vw, 1.25rem);
+  --text-body: 1rem;
+  --text-body-sm: 0.875rem;
+  --text-body-xs: 0.75rem;
+  --leading-tight: 1.2;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --section-gap-sm: 2rem;
+  --section-gap-md: 4rem;
+  --section-gap-lg: 6rem;
+  --section-gap-xl: 8rem;
+
   /* RUDEN TRANSPORT: Premium Dark + Cyan/Emerald Accent */
   --primary: #00D9FF; /* Tech Cyan - Primary CTA */
   --primary-foreground: #070A12; /* Dark Navy */
@@ -122,28 +144,44 @@
   
   /* Premium Typography System */
   body {
-    @apply bg-background text-foreground font-sans;
-    font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    letter-spacing: -0.3px;
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--leading-normal);
+    letter-spacing: var(--tracking-normal);
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     font-weight: 700;
-    letter-spacing: -0.5px;
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
   }
   
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    font-size: var(--text-h1);
   }
   
   h2 {
-    @apply text-3xl md:text-4xl font-bold tracking-tight;
+    font-size: var(--text-h2);
   }
   
   h3 {
-    @apply text-2xl md:text-3xl font-bold tracking-tight;
+    font-size: var(--text-h3);
   }
+  
+  .display-xl {
+    font-size: var(--text-display-xl);
+    font-weight: 800;
+    line-height: var(--leading-tight);
+  }
+  
+  .display-lg {
+    font-size: var(--text-display-lg);
+    font-weight: 800;
+    line-height: var(--leading-tight);
+  }
+  
+
   
   p {
     @apply leading-relaxed;
@@ -350,6 +388,153 @@
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Focus states for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Selection styles */
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* Improved image handling */
+  img {
+    @apply max-w-full h-auto;
+  }
+
+  /* Aspect ratio utilities */
+  .aspect-video {
+    aspect-ratio: 16 / 9;
+  }
+
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .aspect-portrait {
+    aspect-ratio: 3 / 4;
+  }
+
+  /* Smooth transitions for interactive elements */
+  button,
+  a,
+  input,
+  textarea,
+  select {
+    @apply transition-colors duration-200;
+  }
+
+  /* Subtle hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/50;
+  }
+
+  /* Text selection improvement */
+  .select-none {
+    user-select: none;
+  }
+
+  /* Disabled state styling */
+  :disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Loading animation */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-spin {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Gradient text utility */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+
+  /* Backdrop blur for modals */
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+
+  .backdrop-blur {
+    backdrop-filter: blur(10px);
+  }
+
+  .backdrop-blur-lg {
+    backdrop-filter: blur(16px);
+  }
+
+  /* Smooth color transitions */
+  .transition-colors {
+    @apply transition-colors duration-200;
+  }
+
+  /* Enhanced link styles */
+  a:not([class]) {
+    @apply text-primary hover:text-primary/80 transition-colors duration-200 underline underline-offset-2;
+  }
+
+  /* Improved form styling */
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-muted-foreground;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full hover:bg-muted;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
     }
   }
 }

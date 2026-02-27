@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
@@ -8,6 +6,9 @@ import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import FAQ from "@/components/FAQ";
 import CaseStudies from "@/components/CaseStudies";
+import FormEnhanced from "@/components/FormEnhanced";
+import SocialProof from "@/components/SocialProof";
+import Newsletter from "@/components/Newsletter";
 
 /**
  * RUDEN TRANSPORT - Premium Logistics Website
@@ -16,14 +17,6 @@ import CaseStudies from "@/components/CaseStudies";
  */
 
 export default function Home() {
-  const [formStep, setFormStep] = useState<1 | 2>(1);
-  const [formData, setFormData] = useState({
-    company: "",
-    contact: "",
-    email: "",
-    phone: "",
-    description: "",
-  });
   const processRef = useRef<HTMLDivElement>(null);
   const [processVisible, setProcessVisible] = useState(false);
 
@@ -44,40 +37,6 @@ export default function Home() {
 
     return () => observer.disconnect();
   }, []);
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleStep1Submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.company || !formData.contact || !formData.email) {
-      toast.error("Bitte füllen Sie alle Felder aus");
-      return;
-    }
-    setFormStep(2);
-  };
-
-  const handleStep2Submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formData.phone || !formData.description) {
-      toast.error("Bitte füllen Sie alle Felder aus");
-      return;
-    }
-    // TODO: Send form data to backend
-    toast.success("Anfrage erfolgreich versendet!");
-    setFormStep(1);
-    setFormData({
-      company: "",
-      contact: "",
-      email: "",
-      phone: "",
-      description: "",
-    });
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -344,110 +303,7 @@ export default function Home() {
             </div>
 
             <Card className="p-8 md:p-12 bg-card border-border">
-              {/* Progress Indicator */}
-              <div className="mb-8 flex items-center gap-4">
-                <div className={`flex-1 h-1 rounded-full transition-all ${formStep >= 1 ? 'bg-primary' : 'bg-border'}`} />
-                <span className="text-sm font-medium text-muted-foreground">Schritt {formStep} von 2</span>
-                <div className={`flex-1 h-1 rounded-full transition-all ${formStep >= 2 ? 'bg-primary' : 'bg-border'}`} />
-              </div>
-
-              {formStep === 1 ? (
-                <form onSubmit={handleStep1Submit} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Unternehmensname *
-                    </label>
-                    <Input
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      placeholder="Ihr Unternehmen"
-                      className="bg-background border-border text-foreground"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Ansprechpartner *
-                    </label>
-                    <Input
-                      name="contact"
-                      value={formData.contact}
-                      onChange={handleInputChange}
-                      placeholder="Name"
-                      className="bg-background border-border text-foreground"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      E-Mail *
-                    </label>
-                    <Input
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="ihre@email.de"
-                      className="bg-background border-border text-foreground"
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    size="lg"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 btn-pulse"
-                  >
-                    Weiter
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </form>
-              ) : (
-                <form onSubmit={handleStep2Submit} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Telefon *
-                    </label>
-                    <Input
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      placeholder="+49 176 60445403"
-                      defaultValue="+49 176 60445403"
-                      className="bg-background border-border text-foreground"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Beschreibung der Situation *
-                    </label>
-                    <Textarea
-                      name="description"
-                      value={formData.description}
-                      onChange={handleInputChange}
-                      placeholder="Schildern Sie uns Ihre Anforderungen..."
-                      rows={5}
-                      className="bg-background border-border text-foreground resize-none"
-                    />
-                  </div>
-                  <div className="flex gap-4">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      size="lg"
-                      className="flex-1 border-border text-foreground hover:bg-card"
-                      onClick={() => setFormStep(1)}
-                    >
-                      Zurück
-                    </Button>
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="flex-1 bg-primary text-primary-foreground hover:bg-primary/90 btn-pulse"
-                    >
-                      Anfrage senden
-                    </Button>
-                  </div>
-                </form>
-              )}
+              <FormEnhanced />
             </Card>
 
             {/* Contact Info */}
@@ -471,11 +327,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Social Proof Section */}
+      <SocialProof />
+
       {/* Case Studies Section */}
       <CaseStudies />
 
       {/* FAQ Section */}
       <FAQ />
+
+      {/* Newsletter Section */}
+      <section className="bg-card border-t border-border py-16 md:py-20">
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold mb-2">
+                Bleiben Sie informiert
+              </h2>
+              <p className="text-muted-foreground">
+                Erhalten Sie Updates zu neuen Services und Angeboten
+              </p>
+            </div>
+            <Newsletter />
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">
