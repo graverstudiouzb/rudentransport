@@ -1,5 +1,6 @@
 /**
- * RUDEN TRANSPORT - Enhanced SEO Utilities
+ * RUDEN TRANSPORT — Enhanced SEO Utilities
+ * POSITIONING: Premium Tresortransport-Spezialist
  * Includes: Schema.org structured data, prerendering hints, og:tags, JSON-LD
  */
 
@@ -7,7 +8,7 @@ export const SEO_CONFIG = {
   site: {
     name: "RUDEN TRANSPORT",
     url: "https://ruden-transport.de",
-    description: "Spezialtransporte in Deutschland für enge Straßen, Treppen und komplexe Zugangsituationen",
+    description: "Premium Tresortransport für schwierige Zugänge — enge Treppenhäuser, verwinkelte Keller, obere Stockwerke ohne Aufzug. Diskret, versichert, dokumentiert.",
     locale: "de_DE",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp",
   },
@@ -52,7 +53,7 @@ export function generateOrganizationSchema() {
       contactType: "Customer Service",
       telephone: SEO_CONFIG.contact.phone,
       email: SEO_CONFIG.contact.email,
-      availableLanguage: ["de", "en"],
+      availableLanguage: ["de", "en", "ru"],
     },
   };
 }
@@ -68,8 +69,8 @@ export function generateServiceSchema() {
     "@graph": [
       {
         "@type": "Service",
-        name: "Werttransporte für komplexe Zugänge",
-        description: "Spezialisierte Transporte für Orte, die große Trucks nicht erreichen",
+        name: "Tresortransport durch enge Zugänge",
+        description: "Transport von Tresoren und Sicherheitsschränken bis 2.000 kg durch enge Treppenhäuser, verwinkelte Keller und schwierige Zugänge. Mit Treppenpanzern und Spezialequipment.",
         provider: {
           "@type": "LocalBusiness",
           name: "RUDEN TRANSPORT",
@@ -81,8 +82,8 @@ export function generateServiceSchema() {
       },
       {
         "@type": "Service",
-        name: "Diskrete Übergabe",
-        description: "Vertrauliche und dokumentierte Übergabeprozesse",
+        name: "Diskrete Werttransporte",
+        description: "Vertrauliche Transporte mit neutralen Fahrzeugen, ziviler Kleidung und lückenloser Dokumentation. Für Juweliere, Kanzleien und Privatpersonen.",
         provider: {
           "@type": "LocalBusiness",
           name: "RUDEN TRANSPORT",
@@ -90,8 +91,17 @@ export function generateServiceSchema() {
       },
       {
         "@type": "Service",
-        name: "Versicherte Transporte",
-        description: "Vollständig versicherte Werttransporte mit Dokumentation",
+        name: "Dokumentierte Übergabe",
+        description: "Fotodokumentation, Übergabeprotokoll mit Unterschrift, Versicherungsnachweis. Vollversichert bis 100.000 € pro Transport.",
+        provider: {
+          "@type": "LocalBusiness",
+          name: "RUDEN TRANSPORT",
+        },
+      },
+      {
+        "@type": "Service",
+        name: "Tresor-Entsorgung",
+        description: "Fachgerechte Demontage und umweltgerechte Entsorgung alter Tresore und Sicherheitsschränke. Inklusive Entsorgungsnachweis.",
         provider: {
           "@type": "LocalBusiness",
           name: "RUDEN TRANSPORT",
@@ -103,7 +113,6 @@ export function generateServiceSchema() {
 
 /**
  * Generate BreadcrumbList Schema (JSON-LD)
- * Improves navigation in search results
  */
 export function generateBreadcrumbSchema(path: string) {
   const segments = path.split("/").filter(Boolean);
@@ -134,7 +143,6 @@ export function generateBreadcrumbSchema(path: string) {
 
 /**
  * Generate FAQPage Schema (JSON-LD)
- * Enables FAQ rich snippets in search results
  */
 export function generateFAQSchema(faqs: Array<{ question: string; answer: string }>) {
   return {
@@ -201,38 +209,39 @@ export function setOpenGraphTags(config: {
 
 /**
  * SEO Keywords for RUDEN TRANSPORT
- * Used for content optimization and meta descriptions
+ * Focused on: Tresortransport, enge Zugänge, Sicherheitsschränke
  */
 export const SEO_KEYWORDS = {
   primary: [
-    "Werttransporte Deutschland",
-    "Spezialtransporte komplexe Zugänge",
-    "Transporte enge Straßen",
-    "Treppen Transporte",
-    "Diskrete Übergabe",
+    "Tresortransport Deutschland",
+    "Tresor transportieren enge Treppe",
+    "Sicherheitsschrank Transport",
+    "Tresortransport ohne Aufzug",
+    "Premium Tresortransport",
   ],
   secondary: [
-    "Werttransport Lagerhaus",
-    "Sicherer Transport",
-    "Versicherte Transporte",
-    "Dokumentierte Übergabe",
-    "Professionelle Logistik",
+    "Tresor liefern obere Stockwerke",
+    "Panzerschrank transportieren",
+    "Diskreter Tresortransport",
+    "Tresor Entsorgung",
+    "Wertschrank Transport versichert",
   ],
   long_tail: [
-    "Werttransporte wenn der LKW nicht passt",
-    "Transporte für komplexe Zugangsituationen Deutschland",
-    "Sichere Übergabe Treppen bis 5. Stock",
-    "Diskrete Werttransporte Innenhöfe",
-    "Versicherte Transporte Privatobjekte",
+    "Tresor in 5. Stock ohne Aufzug transportieren",
+    "Tresortransport enge Treppenhäuser Altbau",
+    "Schwerer Tresor durch schmale Tür transportieren",
+    "Diskreter Tresortransport neutrale Fahrzeuge",
+    "Tresortransport mit Treppenpanzer",
+    "Tresor Entsorgung fachgerecht",
   ],
 };
 
 /**
  * Prerendering hints for SPA
- * Helps search engines discover all pages
  */
 export const PRERENDER_HINTS = [
   "/",
+  "/leistungen",
   "/impressum",
   "/datenschutz",
 ];

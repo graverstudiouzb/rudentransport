@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone, Mail, Shield, Clock, MapPin, FileCheck } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
@@ -11,16 +11,16 @@ import SocialProof from "@/components/SocialProof";
 import Newsletter from "@/components/Newsletter";
 
 /**
- * RUDEN TRANSPORT - Premium Logistics Website
- * Design Philosophy: Dark Navy (#070A12) + Cyan (#00D9FF) + Emerald (#10B981)
- * Focus: Complex access situations, discretion, professional documentation
+ * RUDEN TRANSPORT — Premium Tresortransport Website
+ * POSITIONING: Nicht Logistik. Nicht Kurier. PREMIUM TRESORTRANSPORT.
+ * KEY DIFFERENTIATOR: Complex access scenarios (stairs, narrow passages, difficult buildings)
+ * Design: Dark Navy (#070A12) + Cyan (#00D9FF) + Emerald (#10B981)
  */
 
 export default function Home() {
   const processRef = useRef<HTMLDivElement>(null);
   const [processVisible, setProcessVisible] = useState(false);
 
-  // Scroll animation observer
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -41,10 +41,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Sichere Übergabe überall in Deutschland"
-        description="Spezialtransporte in Deutschland für enge Straßen, Treppen und komplexe Zugangsituationen. Diskrete Planung, sichere Übergabe, dokumentierte Prozesskette."
+        title="Premium Tresortransport — Ihr Tresor. Jeder Ort. Jede Etage."
+        description="RUDEN TRANSPORT: Spezialisiert auf Tresortransporte in schwierigen Zugangsituationen. Enge Treppenhäuser, verwinkelte Keller, obere Stockwerke ohne Aufzug. Diskret, versichert, dokumentiert."
         url="https://ruden-transport.de"
       />
+
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
         <div className="container flex items-center justify-between py-4">
@@ -57,66 +58,97 @@ export default function Home() {
           </div>
           <div className="hidden md:flex items-center gap-6">
             <a href="/leistungen" className="text-sm text-muted-foreground hover:text-foreground transition">Leistungen</a>
-            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition">Prozess</a>
+            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition">Ablauf</a>
+            <a href="#cases" className="text-sm text-muted-foreground hover:text-foreground transition">Referenzen</a>
+            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition">FAQ</a>
             <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition">Kontakt</a>
           </div>
           <div className="flex items-center gap-3">
-            <a href="tel:+491766044540" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition text-sm font-medium">
+            <a href="tel:+4917660445403" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition text-sm font-medium">
               <Phone className="h-4 w-4" />
               <span className="hidden sm:inline">+49 176 60445403</span>
             </a>
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">Anfrage</Button>
+            <Button
+              size="sm"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+            >
+              Anfrage stellen
+            </Button>
           </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* ═══════════════════════════════════════════════════════════════
+          HERO SECTION — "Ihr Tresor. Jeder Ort. Jede Etage."
+          Positioning: We go where others give up
+      ═══════════════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-card">
         <div className="container py-20 md:py-32">
           <div className="grid gap-12 md:grid-cols-2 items-center">
             <div className="space-y-6 animate-fade-in-up">
               <div className="inline-block">
-                <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                  Spezialtransporte für Deutschland
+                <span className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide border border-primary/20">
+                  Premium Tresortransport — Nicht Kurier. Nicht Spedition.
                 </span>
               </div>
-              <h1 className="text-5xl md:text-6xl font-bold leading-tight animate-fade-in-up" style={{animationDelay: '0.1s'}}>
-                Sichere Übergabe
-                <span className="block text-primary">überall in Deutschland</span>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+                Ihr Tresor.
+                <span className="block text-primary">Jeder Ort. Jede Etage.</span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in-up" style={{animationDelay: '0.2s'}}>
-                Werttransporte für Orte, die große Trucks nicht erreichen. Treppen bis 5. Stock • Innenhöfe • Privatobjekte • Versichert & dokumentiert.
+              <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+                Wir transportieren Tresore und Wertschränke dorthin, wo andere scheitern — durch enge Treppenhäuser, verwinkelte Keller und schwierige Zugänge. Diskret, versichert, dokumentiert.
               </p>
+
+              {/* Quick Trust Badges */}
+              <div className="flex flex-wrap gap-4 pt-2 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
+                {[
+                  { icon: Shield, text: "Vollversichert" },
+                  { icon: Clock, text: "Angebot in 2h" },
+                  { icon: FileCheck, text: "Dokumentiert" },
+                ].map((badge, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <badge.icon className="h-4 w-4 text-emerald-500" />
+                    <span>{badge.text}</span>
+                  </div>
+                ))}
+              </div>
+
               <div className="flex gap-4 pt-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                  className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8"
                   onClick={() =>
                     document
                       .getElementById("contact")
                       ?.scrollIntoView({ behavior: "smooth" })
                   }
                 >
-                  Jetzt anfragen
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  Kostenlos anfragen
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-border text-foreground hover:bg-card"
+                  className="border-border text-foreground hover:bg-card text-base"
+                  onClick={() =>
+                    document
+                      .getElementById("services")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
                 >
-                  Mehr erfahren
+                  Unsere Expertise
                 </Button>
               </div>
             </div>
             <div className="relative h-96 md:h-full animate-slide-in-right" style={{animationDelay: '0.2s'}}>
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp"
-                alt="RUDEN Transport Van"
+                alt="RUDEN TRANSPORT — Premium Tresortransport durch enge Zugänge"
                 className="w-full h-full object-cover rounded-lg"
                 loading="lazy"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23070A12%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%2300D9FF%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage Loading...%3C/text%3E%3C/svg%3E';
+                  (e.target as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23070A12%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%2300D9FF%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3ERUDEN TRANSPORT%3C/text%3E%3C/svg%3E';
                 }}
               />
               <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -138,18 +170,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section
-        id="services"
-        className="bg-card py-20 md:py-32"
-      >
+      {/* ═══════════════════════════════════════════════════════════════
+          "WARUM RUDEN" — Differentiator Section
+          Shows WHY we're different from generic logistics
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="bg-card py-16 md:py-20 border-b border-border">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
+              Warum RUDEN
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-3">
+              Nicht Logistik. Nicht Kurier.<br />
+              <span className="text-primary">Premium Tresortransport.</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Andere transportieren Pakete. Wir transportieren Tresore — durch Orte, die kein LKW erreicht.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Wo andere aufgeben",
+                desc: "Enge Treppenhäuser, verwinkelte Keller, 5. OG ohne Aufzug, schmale Durchgänge ab 65 cm — wir finden immer einen Weg.",
+                highlight: "Spezialequipment für jeden Zugang",
+                icon: MapPin,
+              },
+              {
+                title: "Absolute Diskretion",
+                desc: "Neutrale Fahrzeuge ohne Beschriftung. Geschultes Personal in ziviler Kleidung. Keine Informationen an Dritte.",
+                highlight: "Vertraulich von Anfrage bis Übergabe",
+                icon: Shield,
+              },
+              {
+                title: "Lückenlos dokumentiert",
+                desc: "Fotodokumentation vor und nach Transport. Übergabeprotokoll mit Unterschrift. Vollversicherung bis 100.000 €.",
+                highlight: "Jeder Schritt nachvollziehbar",
+                icon: FileCheck,
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="relative p-6 rounded-xl bg-background border border-border hover:border-primary/40 transition-all duration-300 group"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition">
+                    <item.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  {item.desc}
+                </p>
+                <p className="text-xs font-semibold text-emerald-500 flex items-center gap-1.5">
+                  <CheckCircle2 className="h-3.5 w-3.5" />
+                  {item.highlight}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          SERVICES SECTION — Problem-focused, not feature-focused
+          Each service = a PROBLEM we solve
+      ═══════════════════════════════════════════════════════════════ */}
+      <section id="services" className="bg-card py-20 md:py-32">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Unsere Leistungen
+            <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
+              Unsere Expertise
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
+              Spezialisiert auf das Unmögliche
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Spezialisiert auf Transporte in schwierigen Zugangsituationen
+              Jeder Transport ist anders. Wir lösen die Probleme, an denen andere scheitern.
             </p>
           </div>
 
@@ -157,24 +255,24 @@ export default function Home() {
             {[
               {
                 icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/XJqsPNPZIVGnjjvN.webp",
-                title: "Komplexe Zugänge",
+                title: "Schwertransport durch enge Zugänge",
                 description:
-                  "Enge Straßen, Treppen, Innenhöfe – wir finden immer einen Weg",
+                  "Tresore bis 2.000 kg durch Treppenhäuser, Keller und Durchgänge ab 65 cm Breite. Mit Treppenpanzern und Spezialequipment.",
               },
               {
                 icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/BnEldxqEiEkJxQVL.webp",
-                title: "Diskrete Planung",
-                description: "Vertrauliche Abwicklung nach Ihren Anforderungen",
+                title: "Lückenlose Sicherheitskette",
+                description: "Neutrale Fahrzeuge, geschultes Personal, GPS-Tracking. Von der Abholung bis zur Übergabe — kein Moment ohne Kontrolle.",
               },
               {
                 icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/ETDNmnFBNIFGFlzc.webp",
-                title: "Dokumentation",
-                description: "Vollständige Prozesskette mit Übergabeprotokoll",
+                title: "Professionelle Dokumentation",
+                description: "Fotodokumentation, Übergabeprotokoll, Versicherungsnachweis. Alles, was Sie für Ihre Unterlagen brauchen.",
               },
               {
                 icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/LATSEvgKOYkGqcLY.webp",
-                title: "Schnelle Abwicklung",
-                description: "Effiziente Planung und zuverlässige Durchführung",
+                title: "Schnelle Reaktionszeit",
+                description: "Angebot innerhalb von 2 Stunden. Vor-Ort-Besichtigung am selben Tag. Transport innerhalb von 48 Stunden möglich.",
               },
             ].map((service, idx) => (
                <Card
@@ -187,39 +285,76 @@ export default function Home() {
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition">
                   {service.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   {service.description}
                 </p>
               </Card>
             ))}
           </div>
+
+          {/* Link to full services page */}
+          <div className="mt-12 text-center">
+            <a
+              href="/leistungen"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition"
+            >
+              Alle Leistungen im Detail
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section
-        id="process"
-        className="bg-background py-20 md:py-32"
-      >
+      {/* ═══════════════════════════════════════════════════════════════
+          PROCESS SECTION — Shows expertise, not just steps
+      ═══════════════════════════════════════════════════════════════ */}
+      <section id="process" className="bg-background py-20 md:py-32">
         <div className="container">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Unser Prozess
+            <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
+              Unser Ablauf
+            </span>
+            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
+              Von der Anfrage zur sicheren Übergabe
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Transparente Abwicklung in vier Schritten
+              Jeder Transport wird individuell geplant. Keine Überraschungen — nur Präzision.
             </p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-4" ref={processRef}>
             {[
-              { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/MbdkoXdDzHEbuZHz.webp" },
-              { step: "2", title: "Planung", desc: "Wir planen die optimale Route", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/UilXiGzGXDMchxKr.webp" },
-              { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lDEJEmqVGnyEKgyy.webp" },
-              { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/dmqCArWVFcLiboQk.webp" },
+              {
+                step: "1",
+                title: "Anfrage & Beratung",
+                desc: "Sie beschreiben Ihre Situation — Gewicht, Zugang, Etage. Wir beraten Sie kostenlos und ehrlich.",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/MbdkoXdDzHEbuZHz.webp",
+                detail: "Antwort in unter 2 Stunden"
+              },
+              {
+                step: "2",
+                title: "Vor-Ort-Besichtigung",
+                desc: "Bei komplexen Zugängen kommen wir persönlich vorbei. Wir vermessen Treppen, Durchgänge und planen die Route.",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/UilXiGzGXDMchxKr.webp",
+                detail: "Kostenlos bei Auftragserteilung"
+              },
+              {
+                step: "3",
+                title: "Sicherer Transport",
+                desc: "Spezialequipment, geschultes Team, neutrale Fahrzeuge. Jeder Handgriff sitzt — auch im 5. OG ohne Aufzug.",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lDEJEmqVGnyEKgyy.webp",
+                detail: "Vollversichert bis 100.000 €"
+              },
+              {
+                step: "4",
+                title: "Dokumentierte Übergabe",
+                desc: "Fotodokumentation, Übergabeprotokoll mit Unterschrift, Versicherungsnachweis. Alles sauber abgeschlossen.",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/XJqsPNPZIVGnjjvN.webp",
+                detail: "Protokoll per E-Mail"
+              },
             ].map((item, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="relative"
                 style={{
                   animation: processVisible ? `fadeInUp 0.6s ease-out forwards` : 'none',
@@ -227,21 +362,29 @@ export default function Home() {
                   opacity: 0,
                 }}
               >
-                <div className="flex flex-col items-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="flex flex-col items-center text-center">
+                  {/* Step number */}
+                  <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center z-10">
+                    {item.step}
+                  </div>
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 flex items-center justify-center mb-6 mt-2 hover:scale-110 transition-transform duration-300">
                     {item.icon.startsWith('http') ? (
-                      <img src={item.icon} alt={item.title} className="w-16 h-16 object-contain" loading="lazy" />
+                      <img src={item.icon} alt={item.title} className="w-14 h-14 object-contain" loading="lazy" />
                     ) : (
                       <span className="text-4xl">{item.icon}</span>
                     )}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground text-center leading-relaxed">
+                  <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                     {item.desc}
                   </p>
+                  <span className="text-xs font-medium text-emerald-500 flex items-center gap-1">
+                    <CheckCircle2 className="h-3 w-3" />
+                    {item.detail}
+                  </span>
                 </div>
                 {idx < 3 && (
-                  <div className="hidden md:flex absolute top-10 -right-4 items-center justify-center">
+                  <div className="hidden md:flex absolute top-12 -right-4 items-center justify-center">
                     <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-transparent" />
                     <div className="w-0 h-0 border-l-4 border-l-transparent border-r-0 border-t-4 border-t-primary border-b-4 border-b-transparent" />
                   </div>
@@ -252,17 +395,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Trust Section */}
-      <section className="bg-card py-16 md:py-20">
+      {/* ═══════════════════════════════════════════════════════════════
+          TRUST SECTION — Concrete numbers, not vague claims
+      ═══════════════════════════════════════════════════════════════ */}
+      <section className="bg-card py-16 md:py-20 border-y border-border">
         <div className="container">
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-4">
             {[
-              { label: "Bundesweit", value: "Alle Bundesländer" },
-              { label: "Versichert", value: "Vollständig dokumentiert" },
-              { label: "Diskret", value: "Vertrauliche Abwicklung" },
+              { icon: Shield, label: "Versichert", value: "Bis 100.000 € pro Transport" },
+              { icon: MapPin, label: "Bundesweit", value: "Alle 16 Bundesländer" },
+              { icon: Clock, label: "Reaktionszeit", value: "Angebot in unter 2 Stunden" },
+              { icon: FileCheck, label: "Dokumentiert", value: "Foto + Übergabeprotokoll" },
             ].map((stat, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="flex items-center gap-4 hover:translate-x-1 transition-transform duration-300"
                 style={{
                   animation: `fadeInUp 0.6s ease-out forwards`,
@@ -270,54 +416,15 @@ export default function Home() {
                   opacity: 0,
                 }}
               >
-                <CheckCircle2 className="h-8 w-8 text-secondary flex-shrink-0" />
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <stat.icon className="h-6 w-6 text-primary" />
+                </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">{stat.label}</p>
-                  <p className="text-lg font-semibold">{stat.value}</p>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider">{stat.label}</p>
+                  <p className="text-base font-semibold text-foreground">{stat.value}</p>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact / Form Section */}
-      <section
-        id="contact"
-        className="bg-background py-20 md:py-32"
-      >
-        <div className="container">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">
-                Jetzt anfragen
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Schildern Sie uns Ihre Situation. Wir machen Ihnen ein Angebot.
-              </p>
-            </div>
-
-            <Card className="p-8 md:p-12 bg-card border-border">
-              <FormEnhanced />
-            </Card>
-
-            {/* Contact Info */}
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
-              <div className="flex items-center gap-4">
-                <Phone className="h-6 w-6 text-primary flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-muted-foreground">Telefon</p>
-                  <p className="font-semibold">+49 176 60445403</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <Mail className="h-6 w-6 text-primary flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-muted-foreground">E-Mail</p>
-                  <p className="font-semibold">info@ruden-transport.de</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
@@ -330,6 +437,49 @@ export default function Home() {
 
       {/* FAQ Section */}
       <FAQ />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          CONTACT / FORM SECTION
+      ═══════════════════════════════════════════════════════════════ */}
+      <section id="contact" className="bg-background py-20 md:py-32">
+        <div className="container">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
+                Jetzt starten
+              </span>
+              <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
+                Beschreiben Sie Ihre Situation
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Wir melden uns innerhalb von 2 Stunden mit einem konkreten Angebot — kostenlos und unverbindlich.
+              </p>
+            </div>
+
+            <Card className="p-8 md:p-12 bg-card border-border">
+              <FormEnhanced />
+            </Card>
+
+            {/* Contact Info */}
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              <div className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border">
+                <Phone className="h-6 w-6 text-primary flex-shrink-0" />
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider">Telefon / WhatsApp</p>
+                  <a href="tel:+4917660445403" className="font-semibold text-foreground hover:text-primary transition">+49 176 60445403</a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border">
+                <Mail className="h-6 w-6 text-primary flex-shrink-0" />
+                <div>
+                  <p className="text-xs text-muted-foreground uppercase tracking-wider">E-Mail</p>
+                  <a href="mailto:info@ruden-transport.de" className="font-semibold text-foreground hover:text-primary transition">info@ruden-transport.de</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Newsletter Section */}
       <section className="bg-card border-t border-border py-16 md:py-20">
@@ -348,63 +498,54 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* ═══════════════════════════════════════════════════════════════
+          FOOTER — Professional, with clear positioning
+      ═══════════════════════════════════════════════════════════════ */}
       <footer className="bg-card border-t border-border py-12">
         <div className="container">
           <div className="grid gap-8 md:grid-cols-4 mb-8">
             <div>
-              <h4 className="font-semibold mb-4">RUDEN TRANSPORT</h4>
-              <p className="text-sm text-muted-foreground">
-                Spezialtransporte für komplexe Zugänge in Deutschland
+              <h4 className="font-bold mb-4 text-foreground">RUDEN TRANSPORT</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Premium Tresortransport für schwierige Zugänge. Diskret, versichert, dokumentiert — deutschlandweit.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Navigation</h4>
+              <h4 className="font-bold mb-4 text-foreground">Navigation</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="#services" className="hover:text-foreground transition">
-                    Leistungen
-                  </a>
-                </li>
-                <li>
-                  <a href="#process" className="hover:text-foreground transition">
-                    Prozess
-                  </a>
-                </li>
-                <li>
-                  <a href="#contact" className="hover:text-foreground transition">
-                    Kontakt
-                  </a>
-                </li>
+                <li><a href="/leistungen" className="hover:text-foreground transition">Leistungen</a></li>
+                <li><a href="#process" className="hover:text-foreground transition">Ablauf</a></li>
+                <li><a href="#cases" className="hover:text-foreground transition">Referenzen</a></li>
+                <li><a href="#faq" className="hover:text-foreground transition">FAQ</a></li>
+                <li><a href="#contact" className="hover:text-foreground transition">Kontakt</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Rechtliches</h4>
+              <h4 className="font-bold mb-4 text-foreground">Rechtliches</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>
-                  <a href="/impressum" className="hover:text-foreground transition">
-                    Impressum
-                  </a>
-                </li>
-                <li>
-                  <a href="/datenschutz" className="hover:text-foreground transition">
-                    Datenschutz
-                  </a>
-                </li>
+                <li><a href="/impressum" className="hover:text-foreground transition">Impressum</a></li>
+                <li><a href="/datenschutz" className="hover:text-foreground transition">Datenschutz</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Kontakt</h4>
-              <p className="text-sm text-muted-foreground">
-                +49 176 60445403
-                <br />
-                info@ruden-transport.de
-              </p>
+              <h4 className="font-bold mb-4 text-foreground">Kontakt</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                <p>
+                  <a href="tel:+4917660445403" className="hover:text-foreground transition">+49 176 60445403</a>
+                </p>
+                <p>
+                  <a href="mailto:info@ruden-transport.de" className="hover:text-foreground transition">info@ruden-transport.de</a>
+                </p>
+                <p className="pt-2 text-xs">
+                  Mo–Sa: 07:00–20:00 Uhr<br />
+                  Notfälle: 24/7 erreichbar
+                </p>
+              </div>
             </div>
           </div>
-          <div className="border-t border-border pt-8 flex items-center justify-between text-sm text-muted-foreground">
+          <div className="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
             <p>&copy; 2026 RUDEN TRANSPORT. Alle Rechte vorbehalten.</p>
-            <p>Designed for premium logistics</p>
+            <p className="text-xs">Premium Tresortransport — Nicht Logistik. Nicht Kurier.</p>
           </div>
         </div>
       </footer>

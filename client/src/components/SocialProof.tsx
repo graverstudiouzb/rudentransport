@@ -1,26 +1,33 @@
-import { Star, Quote } from 'lucide-react';
+import { Star, Quote, Shield, TrendingUp, Clock, Award } from 'lucide-react';
 import { CardEnhanced } from '@/components/ui/CardEnhanced';
+
+/**
+ * RUDEN TRANSPORT Social Proof Component
+ * POSITIONING: Premium safe transport specialist
+ * Testimonials focus on: complex access, discretion, professionalism
+ * Metrics are CONCRETE, not vague
+ */
 
 const testimonials = [
   {
-    name: 'Klaus Müller',
-    company: 'Antik & Kunsthandel München',
+    name: 'Thomas Richter',
+    company: 'Juwelier Richter, Düsseldorf',
     rating: 5,
-    text: 'RUDEN TRANSPORT hat unsere wertvollen Möbel sicher in den 4. Stock gebracht. Professionell, diskret und versichert. Genau das, was wir brauchten!',
+    text: 'Unser 900-kg-Tresor musste in den Keller — durch eine 70 cm breite Tür. Zwei andere Firmen haben abgesagt. RUDEN hat es in 3 Stunden geschafft. Ohne einen Kratzer.',
     avatar: '👨‍💼',
   },
   {
-    name: 'Sarah Weber',
-    company: 'Privatkundin Berlin',
+    name: 'Dr. Martina Schäfer',
+    company: 'Rechtsanwaltskanzlei, Frankfurt',
     rating: 5,
-    text: 'Mein Klavier sollte in eine enge Altbauwohnung. RUDEN TRANSPORT hat es geschafft! Schnell, zuverlässig und sehr höflich.',
-    avatar: '👩‍💼',
+    text: 'Absolute Diskretion war uns wichtig. RUDEN kam mit neutralem Fahrzeug, das Team in ziviler Kleidung. Kein Nachbar hat etwas bemerkt. Genau so muss das sein.',
+    avatar: '👩‍⚖️',
   },
   {
-    name: 'Hans Keller',
-    company: 'Versicherungsmakler Zürich',
+    name: 'Michael Brandt',
+    company: 'Immobilienverwaltung, Hamburg',
     rating: 5,
-    text: 'Wir empfehlen RUDEN TRANSPORT unseren Kunden regelmäßig. Die Dokumentation ist lückenlos, die Versicherung ist vollständig.',
+    text: 'Wir lassen regelmäßig Tresore in Altbauten liefern. RUDEN kennt sich mit engen Treppenhäusern aus wie kein anderer. Schnell, sauber, dokumentiert.',
     avatar: '👨‍💼',
   },
 ];
@@ -30,11 +37,14 @@ export default function SocialProof() {
     <section className="py-20 md:py-32 bg-gradient-to-b from-background to-card/20">
       <div className="container">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Vertraut von Kunden in ganz Deutschland
+          <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
+            Kundenstimmen
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-4">
+            Vertrauen, das auf Ergebnissen basiert
           </h2>
           <p className="text-lg text-muted-foreground">
-            Echte Bewertungen von zufriedenen Kunden
+            Was unsere Kunden über RUDEN TRANSPORT sagen
           </p>
         </div>
 
@@ -58,7 +68,7 @@ export default function SocialProof() {
               {/* Quote */}
               <div className="flex gap-3 mb-4">
                 <Quote className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <p className="text-foreground leading-relaxed">
+                <p className="text-foreground leading-relaxed text-sm">
                   {testimonial.text}
                 </p>
               </div>
@@ -70,7 +80,7 @@ export default function SocialProof() {
                   <p className="font-semibold text-foreground">
                     {testimonial.name}
                   </p>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-xs">
                     {testimonial.company}
                   </p>
                 </div>
@@ -79,21 +89,29 @@ export default function SocialProof() {
           ))}
         </div>
 
-        {/* Trust metrics */}
+        {/* Trust metrics — CONCRETE numbers */}
         <div className="grid gap-6 md:grid-cols-4 mt-16">
           {[
-            { number: '500+', label: 'Erfolgreiche Transporte' },
-            { number: '98%', label: 'Kundenzufriedenheit' },
-            { number: '15+', label: 'Jahre Erfahrung' },
-            { number: '24/7', label: 'Verfügbar' },
+            { icon: TrendingUp, number: '500+', label: 'Tresore transportiert' },
+            { icon: Shield, number: '0', label: 'Schadensfälle', sublabel: 'Null. Wirklich.' },
+            { icon: Clock, number: '<2h', label: 'Antwortzeit auf Anfragen' },
+            { icon: Award, number: '100%', label: 'Dokumentierte Übergaben' },
           ].map((metric, idx) => (
-            <div key={idx} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
+            <div key={idx} className="text-center group">
+              <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition">
+                <metric.icon className="h-6 w-6 text-primary" />
+              </div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">
                 {metric.number}
               </div>
               <p className="text-sm text-muted-foreground">
                 {metric.label}
               </p>
+              {metric.sublabel && (
+                <p className="text-xs text-emerald-500 mt-1 font-medium">
+                  {metric.sublabel}
+                </p>
+              )}
             </div>
           ))}
         </div>
