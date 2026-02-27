@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { CheckCircle2 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 /**
  * RUDEN TRANSPORT Case Studies Component
@@ -32,6 +33,26 @@ const CASES = [
 ];
 
 export default function CaseStudies() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="py-20 bg-card/50">
       <div className="container">
@@ -46,11 +67,16 @@ export default function CaseStudies() {
         </div>
 
         {/* Cases Grid */}
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3" ref={containerRef}>
           {CASES.map((caseStudy, index) => (
             <Card
               key={index}
-              className="p-6 border border-border hover:border-primary/50 transition bg-background"
+              className="p-6 border border-border hover:border-primary/50 transition bg-background card-hover"
+              style={{
+                animation: isVisible ? `fadeInUp 0.6s ease-out forwards` : 'none',
+                animationDelay: `${index * 0.15}s`,
+                opacity: 0,
+              }}
             >
               {/* Icon */}
               <div className="text-4xl mb-4">{caseStudy.icon}</div>

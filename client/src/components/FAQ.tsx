@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
@@ -53,6 +53,25 @@ const FAQS = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section id="faq" className="py-20 bg-background">
@@ -68,12 +87,17 @@ export default function FAQ() {
         </div>
 
         {/* FAQ List */}
-        <div className="max-w-3xl mx-auto space-y-3">
+        <div className="max-w-3xl mx-auto space-y-3" ref={containerRef}>
           {FAQS.map((faq, index) => (
             <Card
               key={index}
               className="overflow-hidden border border-border hover:border-primary/50 transition cursor-pointer"
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              style={{
+                animation: isVisible ? `fadeInUp 0.6s ease-out forwards` : 'none',
+                animationDelay: `${index * 0.08}s`,
+                opacity: 0,
+              }}
             >
               {/* Question */}
               <div className="p-6 flex items-start justify-between gap-4 bg-card hover:bg-card/80 transition">

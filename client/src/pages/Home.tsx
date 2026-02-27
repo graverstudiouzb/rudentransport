@@ -3,7 +3,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
 import FAQ from "@/components/FAQ";
@@ -24,6 +24,26 @@ export default function Home() {
     phone: "",
     description: "",
   });
+  const processRef = useRef<HTMLDivElement>(null);
+  const [processVisible, setProcessVisible] = useState(false);
+
+  // Scroll animation observer
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setProcessVisible(true);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (processRef.current) {
+      observer.observe(processRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -78,7 +98,7 @@ export default function Home() {
             <span className="text-xl font-bold text-foreground">RUDEN</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
-            <a href="#services" className="text-sm text-muted-foreground hover:text-foreground transition">Leistungen</a>
+            <a href="/leistungen" className="text-sm text-muted-foreground hover:text-foreground transition">Leistungen</a>
             <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition">Prozess</a>
             <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition">Kontakt</a>
           </div>
@@ -136,6 +156,10 @@ export default function Home() {
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp"
                 alt="RUDEN Transport Van"
                 className="w-full h-full object-cover rounded-lg"
+                loading="lazy"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23070A12%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-size=%2220%22 fill=%22%2300D9FF%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EImage Loading...%3C/text%3E%3C/svg%3E';
+                }}
               />
               <div className="absolute inset-0 rounded-lg bg-gradient-to-t from-background via-transparent to-transparent" />
             </div>
@@ -148,6 +172,10 @@ export default function Home() {
             src="https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/2tCBTG8WVwSkfWPQQwBG1s-img-5_1772159193000_na1fn_d2F2ZS1kaXZpZGVyLXRvcA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80"
             alt=""
             className="w-full h-full object-cover"
+            loading="lazy"
+            onError={(e) => {
+              (e.target as HTMLImageElement).style.display = 'none';
+            }}
           />
         </div>
       </section>
@@ -170,23 +198,23 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 stagger-children">
             {[
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/2tCBTG8WVwSkfWPQQwBG1s-img-1_1772159190000_na1fn_aWNvbi1jb21wbGV4LWFjY2Vzcw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/nEjrd5XY2TglqO3ZBjXvWn-img-3_1772164516000_na1fn_aWNvbi1uYXJyb3ctYWNjZXNz.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
                 title: "Komplexe Zugänge",
                 description:
                   "Enge Straßen, Treppen, Innenhöfe – wir finden immer einen Weg",
               },
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/2tCBTG8WVwSkfWPQQwBG1s-img-2_1772159184000_na1fn_aWNvbi1kaXNjcmV0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/nEjrd5XY2TglqO3ZBjXvWn-img-5_1772164511000_na1fn_aWNvbi1kaXNjcmV0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
                 title: "Diskrete Planung",
                 description: "Vertrauliche Abwicklung nach Ihren Anforderungen",
               },
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/2tCBTG8WVwSkfWPQQwBG1s-img-3_1772159184000_na1fn_aWNvbi1kb2N1bWVudGF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/eQ8HnUO5owD7pn0SJs22Nh-img-4_1772164563000_na1fn_aWNvbi1kb2N1bWVudGF0aW9u.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
                 title: "Dokumentation",
                 description: "Vollständige Prozesskette mit Übergabeprotokoll",
               },
               {
-                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/2tCBTG8WVwSkfWPQQwBG1s-img-4_1772159183000_na1fn_aWNvbi1zcGVlZA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
+                icon: "https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/eQ8HnUO5owD7pn0SJs22Nh-img-5_1772164583000_na1fn_aWNvbi1zcGVlZA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80",
                 title: "Schnelle Abwicklung",
                 description: "Effiziente Planung und zuverlässige Durchführung",
               },
@@ -200,6 +228,10 @@ export default function Home() {
                     src={service.icon}
                     alt={service.title}
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2264%22 height=%2264%22%3E%3Crect fill=%22%23070A12%22 width=%2264%22 height=%2264%22/%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2220%22 fill=%22%2300D9FF%22/%3E%3C/svg%3E';
+                    }}
                   />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition">
@@ -229,21 +261,29 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-4 stagger-children">
+          <div className="grid gap-8 md:grid-cols-4" ref={processRef}>
             {[
               { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation" },
               { step: "2", title: "Planung", desc: "Wir planen die optimale Route" },
               { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung" },
               { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe" },
             ].map((item, idx) => (
-              <div key={idx} className="relative">
+              <div 
+                key={idx} 
+                className="relative"
+                style={{
+                  animation: processVisible ? `fadeInUp 0.6s ease-out forwards` : 'none',
+                  animationDelay: `${idx * 0.15}s`,
+                  opacity: 0,
+                }}
+              >
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl font-bold text-primary-foreground">
                       {item.step}
                     </span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition">{item.title}</h3>
                   <p className="text-sm text-muted-foreground text-center">
                     {item.desc}
                   </p>
@@ -266,7 +306,15 @@ export default function Home() {
               { label: "Versichert", value: "Vollständig dokumentiert" },
               { label: "Diskret", value: "Vertrauliche Abwicklung" },
             ].map((stat, idx) => (
-              <div key={idx} className="flex items-center gap-4">
+              <div 
+                key={idx} 
+                className="flex items-center gap-4 hover:translate-x-1 transition-transform duration-300"
+                style={{
+                  animation: `fadeInUp 0.6s ease-out forwards`,
+                  animationDelay: `${idx * 0.1}s`,
+                  opacity: 0,
+                }}
+              >
                 <CheckCircle2 className="h-8 w-8 text-secondary flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
@@ -295,6 +343,13 @@ export default function Home() {
             </div>
 
             <Card className="p-8 md:p-12 bg-card border-border">
+              {/* Progress Indicator */}
+              <div className="mb-8 flex items-center gap-4">
+                <div className={`flex-1 h-1 rounded-full transition-all ${formStep >= 1 ? 'bg-primary' : 'bg-border'}`} />
+                <span className="text-sm font-medium text-muted-foreground">Schritt {formStep} von 2</span>
+                <div className={`flex-1 h-1 rounded-full transition-all ${formStep >= 2 ? 'bg-primary' : 'bg-border'}`} />
+              </div>
+
               {formStep === 1 ? (
                 <form onSubmit={handleStep1Submit} className="space-y-6">
                   <div>
@@ -354,7 +409,8 @@ export default function Home() {
                       type="tel"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      placeholder="+49 (0) XXX XXXXXXX"
+                      placeholder="+49 176 60445403"
+                      defaultValue="+49 176 60445403"
                       className="bg-background border-border text-foreground"
                     />
                   </div>
@@ -399,7 +455,7 @@ export default function Home() {
                 <Phone className="h-6 w-6 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-sm text-muted-foreground">Telefon</p>
-                  <p className="font-semibold">+49 (0) XXX XXXXXXX</p>
+                  <p className="font-semibold">+49 176 60445403</p>
                 </div>
               </div>
               <div className="flex items-center gap-4">
@@ -468,7 +524,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Kontakt</h4>
               <p className="text-sm text-muted-foreground">
-                +49 (0) XXX XXXXXXX
+                +49 176 60445403
                 <br />
                 info@ruden-transport.de
               </p>
