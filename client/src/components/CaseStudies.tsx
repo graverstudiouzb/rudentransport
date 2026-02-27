@@ -80,7 +80,7 @@ export default function CaseStudies() {
         </div>
 
         {/* Cases Grid */}
-        <div className="grid gap-6 md:grid-cols-3" ref={containerRef}>
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3" ref={containerRef}>
           {CASES.map((caseStudy, index) => (
             <Card
               key={index}

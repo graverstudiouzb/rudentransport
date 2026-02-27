@@ -191,7 +191,7 @@ export default function Leistungen() {
       {/* Services Grid */}
       <section className="bg-card py-20 md:py-32">
         <div className="container">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 stagger-children">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 stagger-children">
             {services.map((service, idx) => (
               <Card
                 key={idx}
@@ -270,7 +270,7 @@ export default function Leistungen() {
               </p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-2">
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
               {[
                 {
                   title: "Wo andere aufgeben",

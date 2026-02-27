@@ -85,14 +85,14 @@ export default function Home() {
       ═══════════════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-card">
         <div className="container py-20 md:py-32">
-          <div className="grid gap-12 md:grid-cols-2 items-center">
+          <div className="grid gap-12 grid-cols-1 md:grid-cols-2 items-center">
             <div className="space-y-6 animate-fade-in-up">
               <div className="inline-block">
                 <span className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide border border-primary/20">
                   Premium Tresortransport — Nicht Kurier. Nicht Spedition.
                 </span>
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
                 Ihr Tresor.
                 <span className="block text-primary">Jeder Ort. Jede Etage.</span>
               </h1>
@@ -114,10 +114,10 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="flex gap-4 pt-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
+              <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up" style={{animationDelay: '0.3s'}}>
                 <Button
                   size="lg"
-                  className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8"
+                  className="w-full sm:w-auto bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8"
                   onClick={() =>
                     document
                       .getElementById("contact")
@@ -130,7 +130,7 @@ export default function Home() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-border text-foreground hover:bg-card text-base"
+                  className="w-full sm:w-auto border-border text-foreground hover:bg-card text-base"
                   onClick={() =>
                     document
                       .getElementById("services")
@@ -180,7 +180,7 @@ export default function Home() {
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
               Warum RUDEN
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mt-4 mb-3">
               Nicht Logistik. Nicht Kurier.<br />
               <span className="text-primary">Premium Tresortransport.</span>
             </h2>
@@ -189,7 +189,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
             {[
               {
                 title: "Wo andere aufgeben",
@@ -243,7 +243,7 @@ export default function Home() {
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
               Unsere Expertise
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 mb-4">
               Spezialisiert auf das Unmögliche
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -251,7 +251,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 stagger-children">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 stagger-children">
             {[
               {
                 icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/XJqsPNPZIVGnjjvN.webp",
@@ -314,7 +314,7 @@ export default function Home() {
             <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold tracking-wider uppercase">
               Unser Ablauf
             </span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mt-4 mb-4">
               Von der Anfrage zur sicheren Übergabe
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -322,7 +322,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-4" ref={processRef}>
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4" ref={processRef}>
             {[
               {
                 step: "1",
@@ -400,7 +400,7 @@ export default function Home() {
       ═══════════════════════════════════════════════════════════════ */}
       <section className="bg-card py-16 md:py-20 border-y border-border">
         <div className="container">
-          <div className="grid gap-8 md:grid-cols-4">
+          <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
             {[
               { icon: Shield, label: "Versichert", value: "Bis 100.000 € pro Transport" },
               { icon: MapPin, label: "Bundesweit", value: "Alle 16 Bundesländer" },
@@ -461,7 +461,7 @@ export default function Home() {
             </Card>
 
             {/* Contact Info */}
-            <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="mt-12 grid gap-6 grid-cols-1 md:grid-cols-2">
               <div className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border">
                 <Phone className="h-6 w-6 text-primary flex-shrink-0" />
                 <div>
@@ -486,9 +486,9 @@ export default function Home() {
         <div className="container">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                Bleiben Sie informiert
-              </h2>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
+              Bleiben Sie informiert
+            </h2>
               <p className="text-muted-foreground">
                 Erhalten Sie Updates zu neuen Services und Angeboten
               </p>
@@ -503,7 +503,7 @@ export default function Home() {
       ═══════════════════════════════════════════════════════════════ */}
       <footer className="bg-card border-t border-border py-12">
         <div className="container">
-          <div className="grid gap-8 md:grid-cols-4 mb-8">
+          <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-8">
             <div>
               <h4 className="font-bold mb-4 text-foreground">RUDEN TRANSPORT</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">

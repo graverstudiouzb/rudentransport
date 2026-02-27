@@ -48,7 +48,7 @@ export default function SocialProof() {
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, idx) => (
             <CardEnhanced
               key={idx}
@@ -90,7 +90,7 @@ export default function SocialProof() {
         </div>
 
         {/* Trust metrics — CONCRETE numbers */}
-        <div className="grid gap-6 md:grid-cols-4 mt-16">
+        <div className="grid gap-6 grid-cols-2 md:grid-cols-4 mt-16">
           {[
             { icon: TrendingUp, number: '500+', label: 'Tresore transportiert' },
             { icon: Shield, number: '0', label: 'Schadensfälle', sublabel: 'Null. Wirklich.' },
