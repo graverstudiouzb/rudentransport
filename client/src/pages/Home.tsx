@@ -156,23 +156,23 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 stagger-children">
             {[
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/uSpezitRvDHxeNFB.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/XJqsPNPZIVGnjjvN.webp",
                 title: "Komplexe Zugänge",
                 description:
                   "Enge Straßen, Treppen, Innenhöfe – wir finden immer einen Weg",
               },
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/twVNywBYByEHHaWV.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/BnEldxqEiEkJxQVL.webp",
                 title: "Diskrete Planung",
                 description: "Vertrauliche Abwicklung nach Ihren Anforderungen",
               },
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/XVLJVIqvwjILivlM.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/ETDNmnFBNIFGFlzc.webp",
                 title: "Dokumentation",
                 description: "Vollständige Prozesskette mit Übergabeprotokoll",
               },
               {
-                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/kchYzzkaGIWQlIeS.png",
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/LATSEvgKOYkGqcLY.webp",
                 title: "Schnelle Abwicklung",
                 description: "Effiziente Planung und zuverlässige Durchführung",
               },
@@ -213,10 +213,10 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-4" ref={processRef}>
             {[
-              { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/dgvlpYyukfyKQWCp.png" },
-              { step: "2", title: "Planung", desc: "Wir planen die optimale Route", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/vaWAnjjzJWCpRrMG.png" },
-              { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/euIlRjWXUURwRKud.png" },
-              { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/jTUNZMlYOfXkLEOL.png" },
+              { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/MbdkoXdDzHEbuZHz.webp" },
+              { step: "2", title: "Planung", desc: "Wir planen die optimale Route", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/UilXiGzGXDMchxKr.webp" },
+              { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lDEJEmqVGnyEKgyy.webp" },
+              { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe", icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/dmqCArWVFcLiboQk.webp" },
             ].map((item, idx) => (
               <div 
                 key={idx} 
