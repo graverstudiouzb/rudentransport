@@ -1,24 +1,146 @@
-# RUDEN TRANSPORT robots.txt
-# Allow all crawlers to index the site
+# RUDEN TRANSPORT — Premium Tresortransport
+# SEO Optimized Robots Configuration
+# Разрешены все боты для максимальной видимости
 
+# Default rules for all bots
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /private/
-Disallow: /*.json$
+Disallow: /admin
+Disallow: /api
+Disallow: /.well-known
+Disallow: /private
+Disallow: /temp
 
-# Specific rules for Google
+# Sitemap
+Sitemap: https://ruden-transport.pages.dev/sitemap.xml
+
+# Crawl delay for resource optimization
+Crawl-delay: 1
+Request-rate: 100/1m
+
+# ═══════════════════════════════════════════════════════════════
+# SEARCH ENGINES
+# ═══════════════════════════════════════════════════════════════
+
+# Google
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
+Request-rate: unlimited
 
-# Specific rules for Bing
+# Google Extended (for AI/LLM training)
+User-agent: Googlebot-Extended
+Allow: /
+
+# Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
 
-# Block bad bots
+# Yandex
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# ═══════════════════════════════════════════════════════════════
+# AI CRAWLERS — FULLY ALLOWED FOR MAXIMUM VISIBILITY
+# ═══════════════════════════════════════════════════════════════
+
+# OpenAI GPT Bot (ChatGPT, GPT-4)
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google Gemini
+User-agent: Gemini
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# Bytespider (ByteDance)
+User-agent: Bytespider
+Allow: /
+
+# Applebot (Apple Intelligence)
+User-agent: Applebot
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# ═══════════════════════════════════════════════════════════════
+# SOCIAL MEDIA CRAWLERS
+# ═══════════════════════════════════════════════════════════════
+
+# Facebook
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+# Twitter/X
+User-agent: Twitterbot
+Allow: /
+
+# LinkedIn
+User-agent: LinkedInBot
+Allow: /
+
+# WhatsApp
+User-agent: WhatsApp
+Allow: /
+
+# Telegram
+User-agent: TelegramBot
+Allow: /
+
+# Instagram
+User-agent: Instagram
+Allow: /
+
+# Pinterest
+User-agent: Pinterestbot
+Allow: /
+
+# ═══════════════════════════════════════════════════════════════
+# ANALYTICS & MONITORING
+# ═══════════════════════════════════════════════════════════════
+
+# Cloudflare Analytics
+User-agent: CF-IPCountry
+Allow: /
+
+# Google Analytics
+User-agent: AdsBot-Google
+Allow: /
+
+# Monitoring bots
+User-agent: UptimeRobot
+Allow: /
+
+# ═══════════════════════════════════════════════════════════════
+# BLOCKED BOTS (Spam, Scrapers)
+# ═══════════════════════════════════════════════════════════════
+
+# Disallow aggressive scrapers
 User-agent: MJ12bot
 Disallow: /
 
@@ -28,6 +150,5 @@ Disallow: /
 User-agent: SemrushBot
 Disallow: /
 
-# Sitemaps
-Sitemap: https://ruden-transport.de/sitemap.xml
-Sitemap: https://ruden-transport.de/sitemap-de.xml
+User-agent: DotBot
+Disallow: /
