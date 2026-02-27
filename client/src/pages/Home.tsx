@@ -263,10 +263,10 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-4" ref={processRef}>
             {[
-              { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation" },
-              { step: "2", title: "Planung", desc: "Wir planen die optimale Route" },
-              { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung" },
-              { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe" },
+              { step: "1", title: "Anfrage", desc: "Sie beschreiben Ihre Situation", icon: "📋" },
+              { step: "2", title: "Planung", desc: "Wir planen die optimale Route", icon: "🗺️" },
+              { step: "3", title: "Transport", desc: "Sichere und diskrete Abwicklung", icon: "🚚" },
+              { step: "4", title: "Übergabe", desc: "Dokumentierte Übergabe", icon: "✅" },
             ].map((item, idx) => (
               <div 
                 key={idx} 
@@ -278,18 +278,19 @@ export default function Home() {
                 }}
               >
                 <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-4 hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl font-bold text-primary-foreground">
-                      {item.step}
-                    </span>
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <span className="text-4xl">{item.icon}</span>
                   </div>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition">{item.title}</h3>
-                  <p className="text-sm text-muted-foreground text-center">
+                  <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
+                  <p className="text-sm text-muted-foreground text-center leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
                 {idx < 3 && (
-                  <div className="hidden md:block absolute top-8 left-[60%] w-[40%] h-0.5 bg-gradient-to-r from-primary to-secondary" />
+                  <div className="hidden md:flex absolute top-10 -right-4 items-center justify-center">
+                    <div className="w-8 h-0.5 bg-gradient-to-r from-primary to-transparent" />
+                    <div className="w-0 h-0 border-l-4 border-l-transparent border-r-0 border-t-4 border-t-primary border-b-4 border-b-transparent" />
+                  </div>
                 )}
               </div>
             ))}
