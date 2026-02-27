@@ -5,15 +5,24 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import Services from "./pages/Services";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
+import CookieBanner from "./components/CookieBanner";
 import LeadMagnetPopup from "./components/LeadMagnetPopup";
 import WhatsAppWidget from "./components/WhatsAppWidget";
-import StickyPhoneCTA from "./components/StickyPhoneCTA";
-
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Home} />
+      <Route path={"/services"} component={Services} />
+      <Route path={"/about"} component={About} />
+      <Route path={"/contact"} component={Contact} />
+      <Route path={"/impressum"} component={Impressum} />
+      <Route path={"/datenschutz"} component={Datenschutz} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />
@@ -21,24 +30,16 @@ function Router() {
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="dark"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          <CookieBanner />
           <LeadMagnetPopup />
           <WhatsAppWidget />
-          <StickyPhoneCTA />
+          <Router />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

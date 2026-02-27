@@ -5,6 +5,9 @@ import { Card } from "@/components/ui/card";
 import { ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import SEOHead from "@/components/SEOHead";
+import FAQ from "@/components/FAQ";
+import CaseStudies from "@/components/CaseStudies";
 
 /**
  * RUDEN TRANSPORT - Premium Logistics Website
@@ -57,7 +60,12 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Sichere Übergabe überall in Deutschland"
+        description="Spezialtransporte in Deutschland für enge Straßen, Treppen und komplexe Zugangsituationen. Diskrete Planung, sichere Übergabe, dokumentierte Prozesskette."
+        url="https://ruden-transport.de"
+      />
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
         <div className="container flex items-center justify-between py-4">
@@ -406,6 +414,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <CaseStudies />
+
+      {/* FAQ Section */}
+      <FAQ />
+
       {/* Footer */}
       <footer className="bg-card border-t border-border py-12">
         <div className="container">
@@ -440,12 +454,12 @@ export default function Home() {
               <h4 className="font-semibold mb-4">Rechtliches</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li>
-                  <a href="#" className="hover:text-foreground transition">
+                  <a href="/impressum" className="hover:text-foreground transition">
                     Impressum
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-foreground transition">
+                  <a href="/datenschutz" className="hover:text-foreground transition">
                     Datenschutz
                   </a>
                 </li>

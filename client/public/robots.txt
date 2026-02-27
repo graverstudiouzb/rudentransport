@@ -1,19 +1,33 @@
+# RUDEN TRANSPORT robots.txt
+# Allow all crawlers to index the site
+
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
 Disallow: /*.json$
 
-# Sitemaps
-Sitemap: https://ruden-transport.de/sitemap.xml
-
-# Crawl delay
-Crawl-delay: 1
-
-# Specific bot rules
+# Specific rules for Google
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
 
+# Specific rules for Bing
 User-agent: Bingbot
 Allow: /
 Crawl-delay: 1
+
+# Block bad bots
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Sitemaps
+Sitemap: https://ruden-transport.de/sitemap.xml
+Sitemap: https://ruden-transport.de/sitemap-de.xml

@@ -81,7 +81,7 @@ export default function LeadMagnetPopup() {
 
   // Handle phone call
   const handlePhoneCall = () => {
-    window.location.href = "tel:+491766044540";
+    window.location.href = "tel:+4917660445403";
   };
 
   if (!isOpen) return null;
@@ -207,7 +207,7 @@ export default function LeadMagnetPopup() {
             <p className="text-xs text-muted-foreground text-center">
               Schneller Kontakt per WhatsApp:{" "}
               <a
-                href="https://wa.me/491766044540"
+                href="https://wa.me/4917660445403"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline font-medium"

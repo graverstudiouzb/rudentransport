@@ -119,8 +119,39 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  /* Premium Typography System */
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    letter-spacing: -0.3px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+  
+  p {
+    @apply leading-relaxed;
+    line-height: 1.65;
+  }
+  
+  a {
+    @apply transition-colors duration-200;
   }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),

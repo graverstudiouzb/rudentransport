@@ -9,7 +9,7 @@ import { useState } from "react";
  * - Tooltip on hover
  */
 
-const WHATSAPP_NUMBER = "491766044540"; // +49 176 60445403
+const WHATSAPP_NUMBER = "4917660445403"; // +49 176 60445403
 const WHATSAPP_MESSAGE = "Hallo RUDEN TRANSPORT, ich hätte eine Anfrage zu einem Spezialtransport.";
 
 export default function WhatsAppWidget() {

@@ -33,7 +33,7 @@ export const seoConfig = {
       "Spezialtransporte für komplexe Zugänge in Deutschland",
     url: "https://ruden-transport.de",
     areaServed: "DE",
-    telephone: "+49 (0) XXX XXXXXXX",
+    telephone: "+49 176 60445403",
     email: "info@ruden-transport.de",
     priceRange: "$$",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp",
@@ -119,7 +119,7 @@ export function generateOrganizationSchema() {
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
-      telephone: "+49 (0) XXX XXXXXXX",
+      telephone: "+49 176 60445403",
       email: "info@ruden-transport.de",
     },
   };

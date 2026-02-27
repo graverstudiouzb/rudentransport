@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
  */
 
 const PHONE_NUMBER = "+491766044540";
-const WHATSAPP_NUMBER = "491766044540";
+const WHATSAPP_NUMBER = "4917660445403";
 const WHATSAPP_MESSAGE = "Hallo RUDEN TRANSPORT, ich hätte eine Anfrage zu einem Spezialtransport.";
 
 export default function StickyPhoneCTA() {
