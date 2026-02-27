@@ -265,26 +265,22 @@
 
   .animate-fade-in-up {
     animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
     will-change: transform, opacity;
   }
 
   .animate-slide-in-right {
     animation: slideInRight 0.6s ease-out forwards;
-    opacity: 0;
     will-change: transform, opacity;
   }
 
   .animate-slide-in-left {
     animation: slideInLeft 0.6s ease-out forwards;
-    opacity: 0;
     will-change: transform, opacity;
   }
 
   /* Stagger children animations */
   .stagger-children > * {
     animation: fadeInUp 0.6s ease-out forwards;
-    opacity: 0;
     will-change: transform, opacity;
   }
 
