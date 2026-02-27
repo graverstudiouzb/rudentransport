@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, CheckCircle2, Phone, Mail, Building2, Lock, FileText, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, Phone, Mail } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import SEOHead from "@/components/SEOHead";
@@ -156,35 +156,33 @@ export default function Home() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 stagger-children">
             {[
               {
-                icon: Building2,
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/rjCmNKnWhIEmxWxr.png",
                 title: "Komplexe Zugänge",
                 description:
                   "Enge Straßen, Treppen, Innenhöfe – wir finden immer einen Weg",
               },
               {
-                icon: Lock,
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/AcCyYMybYpgwGnKH.png",
                 title: "Diskrete Planung",
                 description: "Vertrauliche Abwicklung nach Ihren Anforderungen",
               },
               {
-                icon: FileText,
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/SVqOUzJfiMZlXlfg.png",
                 title: "Dokumentation",
                 description: "Vollständige Prozesskette mit Übergabeprotokoll",
               },
               {
-                icon: Zap,
+                icon: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/pbZeHzvcalRWszfa.png",
                 title: "Schnelle Abwicklung",
                 description: "Effiziente Planung und zuverlässige Durchführung",
               },
-            ].map((service, idx) => {
-              const IconComponent = service.icon;
-              return (
+            ].map((service, idx) => (
                <Card
                 key={idx}
                 className="p-6 bg-background border-border hover:border-primary/50 transition group card-hover"
               >
                 <div className="mb-4 h-16 w-16 flex items-center justify-center rounded-lg bg-primary/10">
-                  <IconComponent className="w-8 h-8 text-primary" />
+                  <img src={service.icon} alt={service.title} className="w-12 h-12 object-contain" loading="lazy" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition">
                   {service.title}
@@ -193,8 +191,7 @@ export default function Home() {
                   {service.description}
                 </p>
               </Card>
-            );
-            })}
+            ))}
           </div>
         </div>
       </section>
