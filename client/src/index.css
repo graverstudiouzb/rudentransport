@@ -43,14 +43,16 @@
 }
 
 :root {
-  /* TYPOGRAPHY SCALE */
+  /* TYPOGRAPHY SCALE — Mobile-First Fluid Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --text-display-xl: clamp(2.5rem, 5vw, 4rem);
-  --text-display-lg: clamp(2rem, 4vw, 3rem);
-  --text-h1: clamp(2rem, 3vw, 2.5rem);
-  --text-h2: clamp(1.5rem, 2.5vw, 2rem);
-  --text-h3: clamp(1.25rem, 2vw, 1.5rem);
-  --text-body-lg: clamp(1.125rem, 1.5vw, 1.25rem);
+  /* Display sizes: min-size, fluid-size (vw), max-size */
+  --text-display-xl: clamp(1.875rem, 6vw, 4rem);
+  --text-display-lg: clamp(1.5rem, 5vw, 3rem);
+  --text-h1: clamp(1.5rem, 4vw, 2.5rem);
+  --text-h2: clamp(1.25rem, 3vw, 2rem);
+  --text-h3: clamp(1.125rem, 2.5vw, 1.75rem);
+  --text-h4: clamp(1rem, 2vw, 1.5rem);
+  --text-body-lg: clamp(1rem, 1.5vw, 1.25rem);
   --text-body: 1rem;
   --text-body-sm: 0.875rem;
   --text-body-xs: 0.75rem;
@@ -60,10 +62,13 @@
   --tracking-tight: -0.02em;
   --tracking-normal: 0;
   --tracking-wide: 0.05em;
-  --section-gap-sm: 2rem;
-  --section-gap-md: 4rem;
-  --section-gap-lg: 6rem;
-  --section-gap-xl: 8rem;
+  /* Responsive Spacing — Mobile-First */
+  --section-gap-xs: 1rem;
+  --section-gap-sm: 1.5rem;
+  --section-gap-md: 2rem;
+  --section-gap-lg: 3rem;
+  --section-gap-xl: 4rem;
+  --section-gap-2xl: 6rem;
 
   /* RUDEN TRANSPORT: Premium Dark + Cyan/Emerald Accent */
   --primary: #00D9FF; /* Tech Cyan - Primary CTA */
@@ -241,6 +246,14 @@
       padding-left: 1.5rem; /* 24px - tablet padding */
       padding-right: 1.5rem;
     }
+    
+    :root {
+      --section-gap-sm: 2rem;
+      --section-gap-md: 3rem;
+      --section-gap-lg: 4rem;
+      --section-gap-xl: 6rem;
+      --section-gap-2xl: 8rem;
+    }
   }
 
   @media (min-width: 1024px) {
@@ -248,6 +261,13 @@
       padding-left: 2rem; /* 32px - desktop padding */
       padding-right: 2rem;
       max-width: 1280px; /* Standard content width */
+    }
+    
+    :root {
+      --section-gap-md: 4rem;
+      --section-gap-lg: 6rem;
+      --section-gap-xl: 8rem;
+      --section-gap-2xl: 10rem;
     }
   }
 }

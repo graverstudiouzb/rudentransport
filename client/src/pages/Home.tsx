@@ -48,29 +48,29 @@ export default function Home() {
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
-        <div className="container flex items-center justify-between py-4">
+        <div className="container flex items-center justify-between py-3 sm:py-4">
           <div className="flex items-center gap-2">
             <img
               src="https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/B4zjoWP8EpqKYG5i9e7xz3_1772171199212_na1fn_cnVkZW4tbG9nby10cmFuc3BhcmVudA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdEp6aUlNWDlNcTdaejNLZnRCRFg3bi9zYW5kYm94L0I0empvV1A4RXBxS1lHNWk5ZTd4ejNfMTc3MjE3MTE5OTIxMl9uYTFmbl9jblZrWlc0dGJHOW5ieTEwY21GdWMzQmhjbVZ1ZEEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ZjhSjccH4a3Q~~ald41sKUsg~U48xUGFosn27FK2Oa6EEM-5PNFhYnCQ1ecNPlCQuG3Ed80YB8ruhxDlYTdu4HGA2gisDq3FrMnvanaqli5he-Bk0LuHoJ04oskA5BVSebUz6MSKZLCE~uxZxsw5zIp2DHifh2RdZbFmlALLVldBYZ-zx0e9widH6c8DatR0A~-HDZTLQerPMJZAiv7F9EUzJPaG5tYb5La5bcLxEgQ1C2xFGqf8A~1UuaZxH796xzGC7EE0EHp13cSMrydeDWC3JJCwd3D2YhwSq7L8MRNDSGk4llRH4ZtMnqsmoFnZ1q5tK4Yda6YSXtZ16iVXMA__"
               alt="RUDEN TRANSPORT"
-              className="h-12 w-auto"
+              className="h-8 sm:h-10 w-auto"
             />
           </div>
-          <div className="hidden md:flex items-center gap-6">
-            <a href="/leistungen" className="text-sm text-muted-foreground hover:text-foreground transition">Leistungen</a>
-            <a href="#process" className="text-sm text-muted-foreground hover:text-foreground transition">Ablauf</a>
-            <a href="#cases" className="text-sm text-muted-foreground hover:text-foreground transition">Referenzen</a>
-            <a href="#faq" className="text-sm text-muted-foreground hover:text-foreground transition">FAQ</a>
-            <a href="#contact" className="text-sm text-muted-foreground hover:text-foreground transition">Kontakt</a>
+          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+            <a href="/leistungen" className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition">Leistungen</a>
+            <a href="#process" className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition">Ablauf</a>
+            <a href="#cases" className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition">Referenzen</a>
+            <a href="#faq" className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition">FAQ</a>
+            <a href="#contact" className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition">Kontakt</a>
           </div>
-          <div className="flex items-center gap-3">
-            <a href="tel:+4917660445403" className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition text-sm font-medium">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a href="tel:+4917660445403" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition text-xs sm:text-sm font-medium">
               <Phone className="h-4 w-4" />
               <span className="hidden sm:inline">+49 176 60445403</span>
             </a>
             <Button
               size="sm"
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs sm:text-sm px-3 sm:px-4 py-2 sm:py-2 min-h-10"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Anfrage stellen
@@ -84,25 +84,24 @@ export default function Home() {
           Positioning: We go where others give up
       ═══════════════════════════════════════════════════════════════ */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-card">
-        <div className="container py-20 md:py-32">
-          <div className="grid gap-12 grid-cols-1 md:grid-cols-2 items-center">
-            <div className="space-y-6 animate-fade-in-up">
+        <div className="container py-12 sm:py-16 md:py-20 lg:py-32">
+          <div className="grid gap-8 sm:gap-12 grid-cols-1 md:grid-cols-2 items-center">
+            <div className="space-y-4 sm:space-y-6 animate-fade-in-up">
               <div className="inline-block">
-                <span className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide border border-primary/20">
+                <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold tracking-wide border border-primary/20">
                   Premium Tresortransport — Nicht Kurier. Nicht Spedition.
                 </span>
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1] animate-fade-in-up" style={{animationDelay: '0.1s'}}>
                 Ihr Tresor.
                 <span className="block text-primary">Jeder Ort. Jede Etage.</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed animate-fade-in-up" style={{animationDelay: '0.2s'}}>
                 Wir transportieren Tresore und Wertschränke dorthin, wo andere scheitern — durch enge Treppenhäuser, verwinkelte Keller und schwierige Zugänge. Diskret, versichert, dokumentiert.
               </p>
 
               {/* Quick Trust Badges */}
-              <div className="flex flex-wrap gap-4 pt-2 animate-fade-in-up" style={{animationDelay: '0.25s'}}>
-                {[
+              <div className="flex flex-wrap gap-2 sm:gap-4 pt-2 animate-fade-in-up" style={{animationDelay: '0.25s'}}>{[
                   { icon: Shield, text: "Vollversichert" },
                   { icon: Clock, text: "Angebot in 2h" },
                   { icon: FileCheck, text: "Dokumentiert" },
@@ -141,7 +140,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="relative h-96 md:h-full animate-slide-in-right" style={{animationDelay: '0.2s'}}>
+            <div className="relative h-64 sm:h-80 md:h-96 lg:h-full animate-slide-in-right" style={{animationDelay: '0.2s'}}>
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp"
                 alt="RUDEN TRANSPORT — Premium Tresortransport durch enge Zugänge"
@@ -486,9 +485,9 @@ export default function Home() {
         <div className="container">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
-              Bleiben Sie informiert
-            </h2>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4">
+                Bleiben Sie informiert
+              </h2>
               <p className="text-muted-foreground">
                 Erhalten Sie Updates zu neuen Services und Angeboten
               </p>
