@@ -50,11 +50,10 @@ export default function Home() {
         <div className="container flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <img
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/yJZWJQKZHSrSKVKd.png"
+              src="https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/9S527RyJK7A5dBhzFAKHXt-img-1_1772170968000_na1fn_cnVkZW4tbG9nbw.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdEp6aUlNWDlNcTdaejNLZnRCRFg3bi9zYW5kYm94LzlTNTI3UnlKSzdBNWRCaHpGQUtIWHQtaW1nLTFfMTc3MjE3MDk2ODAwMF9uYTFmbl9jblZrWlc0dGJHOW5idy5wbmc~eC1vc3MtcHJvY2Vzcz1pbWFnZS9yZXNpemUsd18xOTIwLGhfMTkyMC9mb3JtYXQsd2VicC9xdWFsaXR5LHFfODAiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE3OTg3NjE2MDB9fX1dfQ__&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=HulXV2rlxsjxAONNVsxQ6i3kqaJ7kQ5BOZZExlHj1CgNUdcGg5BkqQKTs9IF0tVkVI~QesZxNjwH8PS-nlkGIh~CcSfU5LKRCYXQRIoUsIexPawaufI5iHlX9yTts--n75W-52sKhGyuogAs1fdkMoVU7nD9tzcCejTDXmKNKvCrqsQIDSur1MtoiWeh2psh-TGzZYbvjwPXG-avSqP4csQX6369ltHsP12VojsnbKphNaDS3TyKXi5SZJjr3UzgtGYrfJGEW-ZJB6cJox1uKe48vfxvJjRXKCqIpXnS7W~Jhm8u~fnjOtw2Sx8b1CBSwEo2Tnev84En0WdhRdLqZQ__"
               alt="RUDEN TRANSPORT"
-              className="h-10 w-auto"
+              className="h-12 w-auto"
             />
-            <span className="text-xl font-bold text-foreground">RUDEN</span>
           </div>
           <div className="hidden md:flex items-center gap-6">
             <a href="/leistungen" className="text-sm text-muted-foreground hover:text-foreground transition">Leistungen</a>
