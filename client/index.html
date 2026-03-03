@@ -51,6 +51,27 @@
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
       data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    <!-- NextBot Chat Widget -->
+    <script src="https://rus.nextbot.ru/chat-widget-bundle-ver3.js"></script>
+    <script>
+      // Guard against double initialization on SPA navigation
+      if (!window.__nextbotWidgetInitialized) {
+        window.__nextbotWidgetInitialized = true;
+        initializeChatWidget({
+          agentId: "a18728d3-2b9a-4e5b-b76b-4fb16384cba4",
+          server: "https://rus.nextbot.ru",
+          chatIconNumberSvg: "1",
+          chatIconLineColor: "#FFFFFF",
+          chatIconBackgroundColor: "#06B6D4",
+          secondsToAutoinvite: "5",
+          messageAutoInvite: "Guten Tag! Brauchen Sie Hilfe bei Transport, Umzug oder Montage?",
+          bgColorAutoInvite: "#CFFAFE",
+          textColorAutoInvite: "#0B1220",
+          widgetBottom: "30",
+          widgetRight: "30"
+        });
+      }
+    </script>
   </body>
 
 </html>
