@@ -13,7 +13,7 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import CookieBanner from "./components/CookieBanner";
 import LeadMagnetPopup from "./components/LeadMagnetPopup";
-import WhatsAppWidget from "./components/WhatsAppWidget";
+
 
 function Router() {
   return (
@@ -40,7 +40,7 @@ function App() {
           <Toaster />
           <CookieBanner />
           {/* <LeadMagnetPopup /> */}
-          <WhatsAppWidget />
+
           <Router />
         </TooltipProvider>
       </ThemeProvider>
