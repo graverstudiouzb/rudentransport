@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "include": [
+    "/impressum.html",
+    "/datenschutz.html",
+    "/*"
+  ],
+  "exclude": []
+}
