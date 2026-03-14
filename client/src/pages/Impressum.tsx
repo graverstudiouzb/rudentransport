@@ -52,13 +52,13 @@ export default function Impressum() {
               </div>
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Geschäftsführer</p>
-                <p className="text-foreground">[Name des Geschäftsführers]</p>
+                <p className="text-foreground font-semibold">Boris Ruden</p>
               </div>
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Adresse</p>
                 <p className="text-foreground">
-                  [Straße und Hausnummer]<br />
-                  [Postleitzahl] [Stadt]<br />
+                  Mittelstr. 19<br />
+                  34621 Frielendorf<br />
                   Deutschland
                 </p>
               </div>
