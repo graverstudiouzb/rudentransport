@@ -67,46 +67,47 @@ export default function Impressum() {
               </div>
 
               {/* Geschäftsführer */}
-              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0 bg-primary/5 p-4 rounded">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
                   Geschäftsführer (gemäß TMG § 5 Abs. 1)
                 </p>
-                <p className="text-lg font-bold text-foreground">Boris Ruden</p>
+                <p className="text-2xl font-black text-primary">Boris Ruden</p>
               </div>
 
               {/* Adresse */}
-              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0 bg-primary/5 p-4 rounded">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
                   Geschäftsadresse (Betriebsstätte)
                 </p>
-                <div className="text-foreground space-y-0.5">
-                  <p className="font-semibold">Mittelstr. 19</p>
-                  <p className="font-semibold">34621 Frielendorf</p>
-                  <p className="font-semibold">Deutschland (DE)</p>
+                <div className="text-foreground space-y-1">
+                  <p className="text-xl font-bold">Mittelstr. 19</p>
+                  <p className="text-xl font-bold">34621 Frielendorf</p>
+                  <p className="text-xl font-bold">Deutschland (DE)</p>
                 </div>
               </div>
 
               {/* Telefon */}
-              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
-                  Telefon
+              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0 bg-primary/5 p-4 rounded">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                  Telefon (Direktkontakt)
                 </p>
                 <a
                   href="tel:+4917660445403"
-                  className="text-primary hover:underline font-semibold"
+                  className="text-2xl font-black text-primary hover:text-primary/80 transition block"
                 >
                   +49 176 60445403
                 </a>
+                <p className="text-xs text-muted-foreground mt-2">Montag–Freitag: 9:00–18:00 Uhr</p>
               </div>
 
               {/* E-Mail */}
-              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
-                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
-                  E-Mail
+              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0 bg-primary/5 p-4 rounded">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                  E-Mail (Direktkontakt)
                 </p>
                 <a
                   href="mailto:info@ruden-transport.de"
-                  className="text-primary hover:underline font-semibold"
+                  className="text-lg font-bold text-primary hover:text-primary/80 transition break-all"
                 >
                   info@ruden-transport.de
                 </a>
