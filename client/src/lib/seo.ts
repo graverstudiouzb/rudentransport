@@ -112,7 +112,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "RUDEN TRANSPORT",
     url: "https://rudentransport.com",
-    logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/yJZWJQKZHSrSKVKd.png",
+    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663439302321/STPyT28eQ2E77WJUVeLAmp/ruden_logo_icon_9d619a40.png",
     description:
       "Spezialtransporte für komplexe Zugänge in Deutschland",
     sameAs: [],

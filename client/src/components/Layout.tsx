@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Phone, Mail, MapPin, Facebook, Linkedin } from "lucide-react";
+import Logo from "./Logo";
 
 interface LayoutProps {
   children: ReactNode;
@@ -19,12 +20,8 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
         <div className="container flex items-center justify-between py-4">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
-            <img
-              src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/yJZWJQKZHSrSKVKd.png"
-              alt="RUDEN TRANSPORT"
-              className="h-10 w-auto"
-            />
+          <a href="/" className="flex items-center">
+            <Logo size="md" />
           </a>
 
           {/* Navigation Links */}
@@ -78,7 +75,7 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
             <div className="grid gap-8 md:grid-cols-4 mb-8">
               {/* About */}
               <div>
-                <h4 className="font-semibold mb-4">RUDEN TRANSPORT</h4>
+                <Logo size="sm" className="mb-3" />
                 <p className="text-sm text-muted-foreground">
                   Spezialtransporte für komplexe Zugänge in Deutschland
                 </p>
