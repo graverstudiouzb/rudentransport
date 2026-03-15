@@ -131,16 +131,13 @@ export default function Impressum() {
                 </p>
               </div>
 
-              {/* USt-IdNr */}
+              {/* Steuernummer */}
               <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
-                  Umsatzsteuer-Identifikationsnummer (USt-IdNr.)
+                  Steuernummer
                 </p>
-                <p className="text-foreground font-semibold">
-                  Auf Anfrage verfügbar
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  Die Umsatzsteuer-Identifikationsnummer wird auf Anfrage unter den oben angegebenen Kontaktdaten bereitgestellt.
+                <p className="text-foreground font-bold text-lg">
+                  024 862 30956
                 </p>
               </div>
             </div>
