@@ -134,11 +134,7 @@ export default function Leistungen() {
       <nav className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
         <div className="container flex items-center justify-between py-4">
           <a href="/" className="flex items-center gap-2">
-            <img
-              src="https://private-us-east-1.manuscdn.com/sessionFile/tJziIMX9Mq7Zz3KftBDX7n/sandbox/B4zjoWP8EpqKYG5i9e7xz3_1772171199212_na1fn_cnVkZW4tbG9nby10cmFuc3BhcmVudA.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80&Expires=1798761600&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly9wcml2YXRlLXVzLWVhc3QtMS5tYW51c2Nkbi5jb20vc2Vzc2lvbkZpbGUvdEp6aUlNWDlNcTdaejNLZnRCRFg3bi9zYW5kYm94L0I0empvV1A4RXBxS1lHNWk5ZTd4ejNfMTc3MjE3MTE5OTIxMl9uYTFmbl9jblZrWlc0dGJHOW5ieTEwY21GdWMzQmhjbVZ1ZEEucG5nP3gtb3NzLXByb2Nlc3M9aW1hZ2UvcmVzaXplLHdfMTkyMCxoXzE5MjAvZm9ybWF0LHdlYnAvcXVhbGl0eSxxXzgwIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNzk4NzYxNjAwfX19XX0_&Key-Pair-Id=K2HSFNDJXOU9YS&Signature=ZjhSjccH4a3Q~~ald41sKUsg~U48xUGFosn27FK2Oa6EEM-5PNFhYnCQ1ecNPlCQuG3Ed80YB8ruhxDlYTdu4HGA2gisDq3FrMnvanaqli5he-Bk0LuHoJ04oskA5BVSebUz6MSKZLCE~uxZxsw5zIp2DHifh2RdZbFmlALLVldBYZ-zx0e9widH6c8DatR0A~-HDZTLQerPMJZAiv7F9EUzJPaG5tYb5La5bcLxEgQ1C2xFGqf8A~1UuaZxH796xzGC7EE0EHp13cSMrydeDWC3JJCwd3D2YhwSq7L8MRNDSGk4llRH4ZtMnqsmoFnZ1q5tK4Yda6YSXtZ16iVXMA__"
-              alt="RUDEN TRANSPORT"
-              className="h-10 w-auto"
-            />
+            <Logo size="md" />
           </a>
           <div className="hidden md:flex items-center gap-6">
             <a href="/" className="text-sm text-muted-foreground hover:text-foreground transition">Startseite</a>
