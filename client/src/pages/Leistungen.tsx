@@ -2,6 +2,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Phone, Shield, MapPin, Clock, FileCheck } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import Logo from "@/components/Logo";
 
 /**
  * RUDEN TRANSPORT — Leistungen Page
