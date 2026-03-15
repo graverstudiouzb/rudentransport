@@ -164,9 +164,15 @@ export default function Contact() {
                       </h3>
                       <a
                         href="tel:+4917662988297"
-                        className="text-muted-foreground hover:text-foreground transition"
+                        className="text-muted-foreground hover:text-foreground transition block"
                       >
                         +49 176 62988297
+                      </a>
+                      <a
+                        href="tel:+4956849227808"
+                        className="text-muted-foreground hover:text-foreground transition block text-sm mt-0.5"
+                      >
+                        +49 5684 9227808 (Festnetz)
                       </a>
                     </div>
                   </div>

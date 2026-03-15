@@ -159,7 +159,7 @@ export default function Impressum() {
                 <p className="font-semibold text-foreground">RUDEN TRANSPORT — B. Ruden</p>
                 <p className="text-foreground">Mittelstr. 19, 34621 Frielendorf</p>
                 <p className="text-foreground">Deutschland</p>
-                <p className="text-foreground">Tel.: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a></p>
+                <p className="text-foreground">Tel.: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a> / <a href="tel:+4956849227808" className="text-primary hover:underline">+49 5684 9227808</a></p>
                 <p className="text-foreground">E-Mail: <a href="mailto:rudentransport@mail.de" className="text-primary hover:underline">rudentransport@mail.de</a></p>
               </div>
             </div>

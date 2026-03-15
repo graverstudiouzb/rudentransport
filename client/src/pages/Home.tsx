@@ -463,6 +463,8 @@ export default function Home() {
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider">Telefon / WhatsApp</p>
                   <a href="tel:+4917662988297" className="font-semibold text-foreground hover:text-primary transition">+49 176 62988297</a>
+                  <br />
+                  <a href="tel:+4956849227808" className="font-semibold text-foreground hover:text-primary transition">+49 5684 9227808</a><br /><a href="tel:+4956849227808" className="font-semibold text-foreground hover:text-primary transition">+49 5684 9227808</a>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border">
@@ -528,6 +530,7 @@ export default function Home() {
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>
                   <a href="tel:+4917662988297" className="hover:text-foreground transition">+49 176 62988297</a>
+                  <br /><a href="tel:+4956849227808" className="hover:text-foreground transition">+49 5684 9227808</a>
                 </p>
                 <p>
                   <a href="mailto:rudentransport@mail.de" className="hover:text-foreground transition">rudentransport@mail.de</a>

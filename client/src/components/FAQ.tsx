@@ -141,7 +141,7 @@ export default function FAQ() {
             href="tel:+4917662988297"
             className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition font-medium"
           >
-            +49 176 62988297 anrufen
+            +49 176 62988297 / +49 5684 9227808 anrufen
           </a>
         </div>
       </div>

@@ -13,7 +13,7 @@ export const SEO_CONFIG = {
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp",
   },
   contact: {
-    phone: "+49 176 62988297",
+    phone: "+49 176 62988297 / +49 5684 9227808",
     email: "rudentransport@mail.de",
     address: "[Adresse wird noch eingegeben]",
   },

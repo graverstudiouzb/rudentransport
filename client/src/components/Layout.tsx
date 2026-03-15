@@ -48,12 +48,27 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-3">
+            <div className="hidden md:flex flex-col items-end gap-0.5">
+              <a
+                href="tel:+4917662988297"
+                className="flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 transition"
+              >
+                <Phone className="h-3 w-3" />
+                <span>+49 176 62988297</span>
+              </a>
+              <a
+                href="tel:+4956849227808"
+                className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-foreground transition"
+              >
+                <Phone className="h-3 w-3" />
+                <span>+49 5684 9227808</span>
+              </a>
+            </div>
             <a
               href="tel:+4917662988297"
-              className="hidden sm:flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition"
+              className="flex sm:hidden items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition"
             >
               <Phone className="h-4 w-4" />
-              <span>+49 176 62988297</span>
             </a>
             <a
               href="#contact"
@@ -126,9 +141,14 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
                 <ul className="space-y-3 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                    <a href="tel:+4917662988297" className="hover:text-foreground transition">
-                      +49 176 62988297
-                    </a>
+                    <div className="flex flex-col gap-0.5">
+                      <a href="tel:+4917662988297" className="hover:text-foreground transition">
+                        +49 176 62988297
+                      </a>
+                      <a href="tel:+4956849227808" className="hover:text-foreground transition">
+                        +49 5684 9227808
+                      </a>
+                    </div>
                   </li>
                   <li className="flex items-start gap-2">
                     <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
