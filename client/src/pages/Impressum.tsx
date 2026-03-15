@@ -71,7 +71,7 @@ export default function Impressum() {
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
                   Inhaber (gemäß § 5 Abs. 1 DDG)
                 </p>
-                <p className="text-2xl font-black text-primary">B. Ruden</p>
+                <p className="text-2xl font-black text-primary">Boris Ruden</p>
               </div>
 
               {/* Adresse */}
@@ -152,14 +152,15 @@ export default function Impressum() {
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">Finanzamt Fritzlar-Homberg, Hessen</p>
               </div>
-              {/* USt-ID Hinweis */}
+              {/* USt-ID */}
               <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
-                  Umsatzsteuer-Identifikationsnummer
+                  USt.-Identifikationsnummer
                 </p>
-                <p className="text-foreground text-sm">
-                  Nicht vorhanden — Kleinunternehmerregelung gemäß § 19 UStG
+                <p className="text-foreground font-black text-2xl font-mono tracking-wider">
+                  DE 358607517
                 </p>
+                <p className="text-xs text-muted-foreground mt-1">Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG</p>
               </div>
             </div>
           </section>
@@ -174,7 +175,7 @@ export default function Impressum() {
                 Verantwortlich für die Inhalte dieser Website gemäß § 18 Abs. 2 MStV und § 5 DDG ist:
               </p>
               <div className="bg-background/50 rounded p-4 border border-border/50">
-                <p className="font-semibold text-foreground">RUDEN TRANSPORT — B. Ruden</p>
+                <p className="font-semibold text-foreground">RUDEN TRANSPORT — Boris Ruden</p>
                 <p className="text-foreground">Mittelstr. 19, 34621 Frielendorf</p>
                 <p className="text-foreground">Deutschland</p>
                 <p className="text-foreground">Tel.: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a> / <a href="tel:+4956849227808" className="text-primary hover:underline">+49 5684 9227808</a></p>
