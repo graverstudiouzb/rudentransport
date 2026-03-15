@@ -464,7 +464,7 @@ export default function Home() {
                   <p className="text-xs text-muted-foreground uppercase tracking-wider">Telefon / WhatsApp</p>
                   <a href="tel:+4917662988297" className="font-semibold text-foreground hover:text-primary transition">+49 176 62988297</a>
                   <br />
-                  <a href="tel:+4956849227808" className="font-semibold text-foreground hover:text-primary transition">+49 5684 9227808</a><br /><a href="tel:+4956849227808" className="font-semibold text-foreground hover:text-primary transition">+49 5684 9227808</a>
+                  <a href="tel:+4956849227808" className="font-semibold text-foreground hover:text-primary transition">+49 5684 9227808</a>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border">

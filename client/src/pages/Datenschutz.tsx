@@ -50,7 +50,7 @@ export default function Datenschutz() {
                 RUDEN TRANSPORT — B. Ruden<br />
                 Mittelstr. 19, 34621 Frielendorf<br />
                 Deutschland<br />
-                Telefon: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a> / <a href="tel:+4956849227808" className="text-primary hover:underline">+49 5684 9227808</a> / <a href="tel:+4956849227808" className="text-primary hover:underline">+49 5684 9227808</a><br />
+                Telefon: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a> / <a href="tel:+4956849227808" className="text-primary hover:underline">+49 5684 9227808</a><br />
                 E-Mail: <a href="mailto:rudentransport@mail.de" className="text-primary hover:underline">rudentransport@mail.de</a>
               </p>
             </div>
