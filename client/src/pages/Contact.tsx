@@ -201,7 +201,7 @@ export default function Contact() {
                         WhatsApp
                       </h3>
                       <a
-                        href="https://wa.me/491766044540"
+                        href="https://wa.me/4917662988297"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-foreground transition"

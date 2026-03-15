@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
  * - Auto-hide on scroll up
  */
 
-const PHONE_NUMBER = "+491766044540";
+const PHONE_NUMBER = "+4917662988297";
 const WHATSAPP_NUMBER = "4917662988297";
 const WHATSAPP_MESSAGE = "Hallo RUDEN TRANSPORT, ich hätte eine Anfrage zu einem Spezialtransport.";
 
