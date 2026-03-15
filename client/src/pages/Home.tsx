@@ -64,9 +64,9 @@ export default function Home() {
             <a href="#contact" className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition">Kontakt</a>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <a href="tel:+4917660445403" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition text-xs sm:text-sm font-medium">
+            <a href="tel:+4917662988297" className="flex items-center gap-1 sm:gap-2 px-2 sm:px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition text-xs sm:text-sm font-medium">
               <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">+49 176 60445403</span>
+              <span className="hidden sm:inline">+49 176 62988297</span>
             </a>
             <Button
               size="sm"
@@ -465,14 +465,14 @@ export default function Home() {
                 <Phone className="h-6 w-6 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider">Telefon / WhatsApp</p>
-                  <a href="tel:+4917660445403" className="font-semibold text-foreground hover:text-primary transition">+49 176 60445403</a>
+                  <a href="tel:+4917662988297" className="font-semibold text-foreground hover:text-primary transition">+49 176 62988297</a>
                 </div>
               </div>
               <div className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border">
                 <Mail className="h-6 w-6 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider">E-Mail</p>
-                  <a href="mailto:info@ruden-transport.de" className="font-semibold text-foreground hover:text-primary transition">info@ruden-transport.de</a>
+                  <a href="mailto:b171071@yandex.ru" className="font-semibold text-foreground hover:text-primary transition">b171071@yandex.ru</a>
                 </div>
               </div>
             </div>
@@ -530,10 +530,10 @@ export default function Home() {
               <h4 className="font-bold mb-4 text-foreground">Kontakt</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>
-                  <a href="tel:+4917660445403" className="hover:text-foreground transition">+49 176 60445403</a>
+                  <a href="tel:+4917662988297" className="hover:text-foreground transition">+49 176 62988297</a>
                 </p>
                 <p>
-                  <a href="mailto:info@ruden-transport.de" className="hover:text-foreground transition">info@ruden-transport.de</a>
+                  <a href="mailto:b171071@yandex.ru" className="hover:text-foreground transition">b171071@yandex.ru</a>
                 </p>
                 <p className="pt-2 text-xs">
                   Mo–Sa: 07:00–20:00 Uhr<br />

@@ -49,8 +49,8 @@ export default function Datenschutz() {
               <p className="text-foreground">
                 RUDEN TRANSPORT<br />
                 [Adresse]<br />
-                Telefon: <a href="tel:+4917660445403" className="text-primary hover:underline">+49 176 60445403</a><br />
-                E-Mail: <a href="mailto:info@ruden-transport.de" className="text-primary hover:underline">info@ruden-transport.de</a>
+                Telefon: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a><br />
+                E-Mail: <a href="mailto:b171071@yandex.ru" className="text-primary hover:underline">b171071@yandex.ru</a>
               </p>
             </div>
           </section>
@@ -127,7 +127,7 @@ export default function Datenschutz() {
               <li><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Sie können der Verarbeitung widersprechen</li>
             </ul>
             <p className="text-foreground mt-4">
-              Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter <a href="mailto:info@ruden-transport.de" className="text-primary hover:underline">info@ruden-transport.de</a> oder <a href="tel:+4917660445403" className="text-primary hover:underline">+49 176 60445403</a>.
+              Um diese Rechte auszuüben, kontaktieren Sie uns bitte unter <a href="mailto:b171071@yandex.ru" className="text-primary hover:underline">b171071@yandex.ru</a> oder <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a>.
             </p>
           </section>
 
@@ -172,8 +172,8 @@ export default function Datenschutz() {
             <div className="bg-card border border-border rounded-lg p-6">
               <p className="text-foreground">
                 RUDEN TRANSPORT<br />
-                E-Mail: <a href="mailto:info@ruden-transport.de" className="text-primary hover:underline">info@ruden-transport.de</a><br />
-                Telefon: <a href="tel:+4917660445403" className="text-primary hover:underline">+49 176 60445403</a>
+                E-Mail: <a href="mailto:b171071@yandex.ru" className="text-primary hover:underline">b171071@yandex.ru</a><br />
+                Telefon: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a>
               </p>
             </div>
           </section>

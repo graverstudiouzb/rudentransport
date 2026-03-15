@@ -52,11 +52,11 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
           {/* CTA Buttons */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+4917660445403"
+              href="tel:+4917662988297"
               className="hidden sm:flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition"
             >
               <Phone className="h-4 w-4" />
-              <span>+49 176 60445403</span>
+              <span>+49 176 62988297</span>
             </a>
             <a
               href="#contact"
@@ -129,14 +129,14 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
                 <ul className="space-y-3 text-sm text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                    <a href="tel:+4917660445403" className="hover:text-foreground transition">
-                      +49 176 60445403
+                    <a href="tel:+4917662988297" className="hover:text-foreground transition">
+                      +49 176 62988297
                     </a>
                   </li>
                   <li className="flex items-start gap-2">
                     <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                    <a href="mailto:info@ruden-transport.de" className="hover:text-foreground transition">
-                      info@ruden-transport.de
+                    <a href="mailto:b171071@yandex.ru" className="hover:text-foreground transition">
+                      b171071@yandex.ru
                     </a>
                   </li>
                 </ul>

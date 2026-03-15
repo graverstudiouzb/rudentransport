@@ -163,10 +163,10 @@ export default function Contact() {
                         Telefon
                       </h3>
                       <a
-                        href="tel:+4917660445403"
+                        href="tel:+4917662988297"
                         className="text-muted-foreground hover:text-foreground transition"
                       >
-                        +49 176 60445403
+                        +49 176 62988297
                       </a>
                     </div>
                   </div>
@@ -181,10 +181,10 @@ export default function Contact() {
                         Email
                       </h3>
                       <a
-                        href="mailto:info@ruden-transport.de"
+                        href="mailto:b171071@yandex.ru"
                         className="text-muted-foreground hover:text-foreground transition"
                       >
-                        info@ruden-transport.de
+                        b171071@yandex.ru
                       </a>
                     </div>
                   </div>
@@ -206,7 +206,7 @@ export default function Contact() {
                         rel="noopener noreferrer"
                         className="text-muted-foreground hover:text-foreground transition"
                       >
-                        +49 176 60445403
+                        +49 176 62988297
                       </a>
                     </div>
                   </div>

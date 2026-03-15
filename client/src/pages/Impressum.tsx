@@ -92,10 +92,10 @@ export default function Impressum() {
                   Telefon (Direktkontakt)
                 </p>
                 <a
-                  href="tel:+4917660445403"
+                  href="tel:+4917662988297"
                   className="text-2xl font-black text-primary hover:text-primary/80 transition block"
                 >
-                  +49 176 60445403
+                  +49 176 62988297
                 </a>
                 <p className="text-xs text-muted-foreground mt-2">Montag–Freitag: 9:00–18:00 Uhr</p>
               </div>
@@ -106,10 +106,10 @@ export default function Impressum() {
                   E-Mail (Direktkontakt)
                 </p>
                 <a
-                  href="mailto:info@ruden-transport.de"
+                  href="mailto:b171071@yandex.ru"
                   className="text-lg font-bold text-primary hover:text-primary/80 transition break-all"
                 >
-                  info@ruden-transport.de
+                  b171071@yandex.ru
                 </a>
               </div>
             </div>

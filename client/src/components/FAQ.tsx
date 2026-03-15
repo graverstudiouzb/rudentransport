@@ -138,10 +138,10 @@ export default function FAQ() {
             Ihre Frage ist nicht dabei? Rufen Sie uns an — wir beraten Sie gern.
           </p>
           <a
-            href="tel:+4917660445403"
+            href="tel:+4917662988297"
             className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition font-medium"
           >
-            +49 176 60445403 anrufen
+            +49 176 62988297 anrufen
           </a>
         </div>
       </div>

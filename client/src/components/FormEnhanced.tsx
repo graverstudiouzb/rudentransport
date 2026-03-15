@@ -246,7 +246,7 @@ export default function FormEnhanced() {
               label="Telefonnummer"
               name="phone"
               type="tel"
-              placeholder="+49 176 60445403"
+              placeholder="+49 176 62988297"
               value={formData.phone}
               onChange={handleInputChange}
               error={errors.phone}
