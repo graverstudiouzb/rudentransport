@@ -5,7 +5,7 @@
 
 export const seoConfig = {
   siteName: "RUDEN TRANSPORT",
-  siteUrl: "https://ruden-transport.de",
+  siteUrl: "https://rudentransport.com",
   locale: "de_DE",
   
   // Main page metadata
@@ -31,7 +31,7 @@ export const seoConfig = {
     name: "RUDEN TRANSPORT",
     description:
       "Spezialtransporte für komplexe Zugänge in Deutschland",
-    url: "https://ruden-transport.de",
+    url: "https://rudentransport.com",
     areaServed: "DE",
     telephone: "+49 176 62988297",
     email: "b171071@yandex.ru",
@@ -111,7 +111,7 @@ export function generateOrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "RUDEN TRANSPORT",
-    url: "https://ruden-transport.de",
+    url: "https://rudentransport.com",
     logo: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/yJZWJQKZHSrSKVKd.png",
     description:
       "Spezialtransporte für komplexe Zugänge in Deutschland",

@@ -92,9 +92,9 @@ export default function SocialProof() {
         {/* Trust metrics — CONCRETE numbers */}
         <div className="grid gap-6 grid-cols-2 md:grid-cols-4 mt-16">
           {[
-            { icon: TrendingUp, number: '500+', label: 'Tresore transportiert' },
-            { icon: Shield, number: '0', label: 'Schadensfälle', sublabel: 'Null. Wirklich.' },
-            { icon: Clock, number: '<2h', label: 'Antwortzeit auf Anfragen' },
+            { icon: TrendingUp, number: 'Viele', label: 'Tresore transportiert' },
+            { icon: Shield, number: '0', label: 'Beschädigte Güter', sublabel: 'Sorgfalt zuerst.' },
+            { icon: Clock, number: 'Schnell', label: 'Antwortzeit auf Anfragen' },
             { icon: Award, number: '100%', label: 'Dokumentierte Übergaben' },
           ].map((metric, idx) => (
             <div key={idx} className="text-center group">
@@ -115,6 +115,11 @@ export default function SocialProof() {
             </div>
           ))}
         </div>
+      </div>
+      <div className="container mt-4">
+        <p className="text-xs text-muted-foreground/60 text-center">
+          * Die dargestellten Kundenstimmen sind illustrative Beispiele typischer Einsätze. Echte Referenzen auf Anfrage.
+        </p>
       </div>
     </section>
   );

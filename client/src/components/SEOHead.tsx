@@ -23,7 +23,7 @@ export default function SEOHead({
   title,
   description,
   image = "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp",
-  url = "https://ruden-transport.de",
+  url = "https://rudentransport.com",
   type = "website",
 }: SEOHeadProps) {
   useEffect(() => {

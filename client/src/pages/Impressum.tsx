@@ -48,7 +48,7 @@ export default function Impressum() {
           <section>
             <h1 className="text-3xl font-bold text-foreground mb-2">Impressum</h1>
             <p className="text-muted-foreground text-sm">
-              Angaben gemäß § 5 Telemediengesetz (TMG) und § 5 Absatz 1 Datenschutzgesetz (DSG)
+              Angaben gemäß § 5 Abs. 1 Digitale-Dienste-Gesetz (DDG)
             </p>
           </section>
 
@@ -66,12 +66,12 @@ export default function Impressum() {
                 <p className="text-lg font-bold text-foreground">RUDEN TRANSPORT</p>
               </div>
 
-              {/* Geschäftsführer */}
+              {/* Inhaber */}
               <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0 bg-primary/5 p-4 rounded">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
-                  Geschäftsführer (gemäß TMG § 5 Abs. 1)
+                  Inhaber (gemäß § 5 Abs. 1 DDG)
                 </p>
-                <p className="text-2xl font-black text-primary">Boris Ruden</p>
+                <p className="text-2xl font-black text-primary">B. Ruden</p>
               </div>
 
               {/* Adresse */}
@@ -121,13 +121,13 @@ export default function Impressum() {
               Handelsregister & Steuernummer
             </h2>
             <div className="bg-card border border-border rounded-lg p-6 space-y-4">
-              {/* Handelsregister Info */}
+              {/* Rechtsform */}
               <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
-                  Handelsregister (Amtsgericht)
+                  Rechtsform
                 </p>
                 <p className="text-foreground font-semibold">
-                  Amtsgericht Fritzlar, Hessen, Deutschland
+                  Einzelunternehmen (Gewerbebetrieb)
                 </p>
               </div>
 
@@ -153,13 +153,14 @@ export default function Impressum() {
             </h2>
             <div className="bg-card border border-border rounded-lg p-6">
               <p className="text-foreground mb-3">
-                Verantwortlich für die Inhalte dieser Website gemäß § 7 Abs. 1 TMG ist:
+                Verantwortlich für die Inhalte dieser Website gemäß § 18 Abs. 2 MStV und § 5 DDG ist:
               </p>
               <div className="bg-background/50 rounded p-4 border border-border/50">
-                <p className="font-semibold text-foreground">Boris Ruden</p>
-                <p className="text-foreground">Mittelstr. 19</p>
-                <p className="text-foreground">34621 Frielendorf</p>
+                <p className="font-semibold text-foreground">RUDEN TRANSPORT — B. Ruden</p>
+                <p className="text-foreground">Mittelstr. 19, 34621 Frielendorf</p>
                 <p className="text-foreground">Deutschland</p>
+                <p className="text-foreground">Tel.: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a></p>
+                <p className="text-foreground">E-Mail: <a href="mailto:b171071@yandex.ru" className="text-primary hover:underline">b171071@yandex.ru</a></p>
               </div>
             </div>
           </section>
@@ -265,7 +266,7 @@ export default function Impressum() {
               </p>
               <p>
                 <strong>Anwendbares Recht:</strong> Die Nutzung dieser Website unterliegt dem Recht der Bundesrepublik Deutschland. 
-                Gerichtsstand ist Fritzlar, Hessen, Deutschland.
+                Gerichtsstand ist Frielendorf (Schwalm-Eder-Kreis), Hessen, Deutschland.
               </p>
               <p>
                 <strong>Sprache:</strong> Diese Website ist in deutscher Sprache verfasst. Die Inhalte richten sich in erster Linie 

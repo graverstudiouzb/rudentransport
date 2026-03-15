@@ -44,7 +44,7 @@ const PROCESS_STEPS = [
 const VALUES = [
   {
     title: "Zuverlässigkeit",
-    description: "Wir halten unsere Versprechen. Pünktlichkeit und Genauigkeit sind garantiert.",
+    description: "Wir halten unsere Versprechen. Pünktlichkeit und Genauigkeit haben für uns höchste Priorität.",
   },
   {
     title: "Diskretion",
@@ -66,7 +66,7 @@ export default function About() {
       <SEOHead
         title="Über uns & Prozess"
         description="Erfahren Sie mehr über RUDEN TRANSPORT und unseren professionellen Transportprozess"
-        url="https://ruden-transport.de/about"
+        url="https://rudentransport.com/about"
       />
 
       {/* Hero */}
@@ -164,7 +164,7 @@ export default function About() {
                 ✓ Diskret
               </h3>
               <p className="text-muted-foreground">
-                Vertraulichkeit ist garantiert. Wir behandeln alle Informationen streng vertraulich.
+                Absolute Vertraulichkeit. Wir behandeln alle Informationen streng vertraulich und diskret.
               </p>
             </Card>
           </div>

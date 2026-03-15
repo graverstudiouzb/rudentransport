@@ -77,7 +77,7 @@ export default function Services() {
       <SEOHead
         title="Unsere Leistungen"
         description="Spezialtransporte, diskrete Übergabe, versicherte Transporte und mehr. Alle Services von RUDEN TRANSPORT."
-        url="https://ruden-transport.de/services"
+        url="https://rudentransport.com/services"
       />
 
       {/* Hero */}

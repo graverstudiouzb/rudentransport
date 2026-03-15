@@ -47,8 +47,9 @@ export default function Datenschutz() {
             <h2 className="text-2xl font-bold text-foreground">1. Verantwortlicher</h2>
             <div className="bg-card border border-border rounded-lg p-6">
               <p className="text-foreground">
-                RUDEN TRANSPORT<br />
-                [Adresse]<br />
+                RUDEN TRANSPORT — B. Ruden<br />
+                Mittelstr. 19, 34621 Frielendorf<br />
+                Deutschland<br />
                 Telefon: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a><br />
                 E-Mail: <a href="mailto:b171071@yandex.ru" className="text-primary hover:underline">b171071@yandex.ru</a>
               </p>
@@ -96,9 +97,13 @@ export default function Datenschutz() {
             <p className="text-foreground">
               Notwendige Cookies sind erforderlich für die Funktionalität der Website (z.B. Sitzungsverwaltung). Diese können ohne Einwilligung gespeichert werden.
             </p>
-            <h3 className="text-xl font-semibold text-foreground">Google Analytics</h3>
+            <h3 className="text-xl font-semibold text-foreground">Google Fonts</h3>
             <p className="text-foreground">
-              Diese Website nutzt Google Analytics zur Analyse von Website-Nutzung. Die Daten werden anonymisiert und an Google übermittelt. Sie können das Tracking ablehnen oder mit dem Google Analytics Opt-out Browser Add-on deaktivieren.
+              Diese Website verwendet Google Fonts (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA). Beim Laden der Seite werden Schriftarten von Google-Servern abgerufen, wobei Ihre IP-Adresse übertragen werden kann. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einheitlicher Darstellung). Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">https://policies.google.com/privacy</a>.
+            </p>
+            <h3 className="text-xl font-semibold text-foreground">Chat-Widget (NextBot)</h3>
+            <p className="text-foreground">
+              Diese Website nutzt ein Chat-Widget des Anbieters NextBot (Server: rus.nextbot.ru). Beim Laden des Widgets kann eine Verbindung zu externen Servern hergestellt werden. Es werden keine personenbezogenen Daten ohne Ihre aktive Eingabe gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Sie können das Widget durch Deaktivierung von JavaScript im Browser unterbinden.
             </p>
             <h3 className="text-xl font-semibold text-foreground">Marketing-Cookies</h3>
             <p className="text-foreground">

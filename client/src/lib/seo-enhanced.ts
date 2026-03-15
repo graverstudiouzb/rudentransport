@@ -7,7 +7,7 @@
 export const SEO_CONFIG = {
   site: {
     name: "RUDEN TRANSPORT",
-    url: "https://ruden-transport.de",
+    url: "https://rudentransport.com",
     description: "Premium Tresortransport für schwierige Zugänge — enge Treppenhäuser, verwinkelte Keller, obere Stockwerke ohne Aufzug. Diskret, versichert, dokumentiert.",
     locale: "de_DE",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp",
@@ -27,9 +27,9 @@ export function generateOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://ruden-transport.de",
+    "@id": "https://rudentransport.com",
     name: "RUDEN TRANSPORT",
-    url: "https://ruden-transport.de",
+    url: "https://rudentransport.com",
     description: SEO_CONFIG.site.description,
     image: SEO_CONFIG.site.image,
     telephone: SEO_CONFIG.contact.phone,
@@ -121,7 +121,7 @@ export function generateBreadcrumbSchema(path: string) {
       "@type": "ListItem",
       position: 1,
       name: "Startseite",
-      item: "https://ruden-transport.de",
+      item: "https://rudentransport.com",
     },
   ];
 
@@ -130,7 +130,7 @@ export function generateBreadcrumbSchema(path: string) {
       "@type": "ListItem",
       position: index + 2,
       name: segment.charAt(0).toUpperCase() + segment.slice(1),
-      item: `https://ruden-transport.de/${segments.slice(0, index + 1).join("/")}`,
+      item: `https://rudentransport.com/${segments.slice(0, index + 1).join("/")}`,
     });
   });
 

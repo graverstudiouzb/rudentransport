@@ -43,7 +43,7 @@ export default function Home() {
       <SEOHead
         title="Premium Tresortransport — Ihr Tresor. Jeder Ort. Jede Etage."
         description="RUDEN TRANSPORT: Spezialisiert auf Tresortransporte in schwierigen Zugangsituationen. Enge Treppenhäuser, verwinkelte Keller, obere Stockwerke ohne Aufzug. Diskret, versichert, dokumentiert."
-        url="https://ruden-transport.de"
+        url="https://rudentransport.com"
       />
 
       {/* Navigation */}

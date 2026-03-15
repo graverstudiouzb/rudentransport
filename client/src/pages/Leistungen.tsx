@@ -127,7 +127,7 @@ export default function Leistungen() {
       <SEOHead
         title="Leistungen — Premium Tresortransport | RUDEN TRANSPORT"
         description="Tresortransport durch enge Zugänge, diskrete Werttransporte, dokumentierte Übergabe, Express-Service, Tresor-Entsorgung. Spezialisiert auf das Unmögliche."
-        url="https://ruden-transport.de/leistungen"
+        url="https://rudentransport.com/leistungen"
       />
 
       {/* Navigation */}

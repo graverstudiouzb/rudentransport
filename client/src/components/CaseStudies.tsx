@@ -75,7 +75,10 @@ export default function CaseStudies() {
             Wo andere scheitern, liefern wir
           </h2>
           <p className="text-lg text-muted-foreground">
-            Echte Einsätze. Echte Herausforderungen. Echte Ergebnisse.
+            Typische Einsätze. Reale Herausforderungen. Professionelle Lösungen.
+          </p>
+          <p className="text-xs text-muted-foreground/60 mt-2">
+            * Illustrative Fallbeispiele. Echte Referenzen auf Anfrage erhältlich.
           </p>
         </div>
 

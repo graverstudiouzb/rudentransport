@@ -45,7 +45,7 @@ export default function Contact() {
       <SEOHead
         title="Kontakt"
         description="Kontaktieren Sie RUDEN TRANSPORT für Ihre Spezialtransporte. Kostenlose Besichtigung und unverbindliches Angebot."
-        url="https://ruden-transport.de/contact"
+        url="https://rudentransport.com/contact"
       />
 
       {/* Hero */}

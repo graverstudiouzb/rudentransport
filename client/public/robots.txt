@@ -12,7 +12,7 @@ Disallow: /private
 Disallow: /temp
 
 # Sitemap
-Sitemap: https://ruden-transport.pages.dev/sitemap.xml
+Sitemap: https://rudentransport.com/sitemap.xml
 
 # Crawl delay for resource optimization
 Crawl-delay: 1
