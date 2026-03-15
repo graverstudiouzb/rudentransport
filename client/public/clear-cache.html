@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cache wird geleert... | RUDEN TRANSPORT</title>
+  <style>
+    body { background: #0a0f1a; color: #00d4ff; font-family: monospace; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; flex-direction: column; gap: 20px; }
+    h1 { font-size: 1.5rem; }
+    #log { color: #aaa; font-size: 0.85rem; max-width: 500px; text-align: left; }
+    .ok { color: #00ff88; }
+    .err { color: #ff4444; }
+  </style>
+</head>
+<body>
+  <h1>🔄 Cache wird geleert...</h1>
+  <div id="log"></div>
+  <script>
+    var log = document.getElementById('log');
+    function add(msg, cls) {
+      var p = document.createElement('p');
+      p.className = cls || '';
+      p.textContent = msg;
+      log.appendChild(p);
+    }
+
+    async function nukeCacheAndReload() {
+      add('Schritt 1: Service Workers werden deregistriert...');
+      try {
+        var regs = await navigator.serviceWorker.getRegistrations();
+        for (var r of regs) {
+          await r.unregister();
+          add('  ✓ Deregistriert: ' + r.scope, 'ok');
+        }
+        if (regs.length === 0) add('  (keine Service Workers gefunden)', 'ok');
+      } catch(e) { add('  Fehler: ' + e, 'err'); }
+
+      add('Schritt 2: Alle Caches werden gelöscht...');
+      try {
+        var keys = await caches.keys();
+        for (var k of keys) {
+          await caches.delete(k);
+          add('  ✓ Cache gelöscht: ' + k, 'ok');
+        }
+        if (keys.length === 0) add('  (keine Caches gefunden)', 'ok');
+      } catch(e) { add('  Fehler: ' + e, 'err'); }
+
+      add('Schritt 3: Weiterleitung zur Startseite...', 'ok');
+      setTimeout(function() {
+        window.location.replace('/?nocache=' + Date.now());
+      }, 1500);
+    }
+
+    nukeCacheAndReload();
+  </script>
+</body>
+</html>
