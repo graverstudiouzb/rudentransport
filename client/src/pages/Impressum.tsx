@@ -86,10 +86,10 @@ export default function Impressum() {
                 </div>
               </div>
 
-              {/* Telefon */}
+              {/* Telefon Mobil */}
               <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0 bg-primary/5 p-4 rounded">
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
-                  Telefon (Direktkontakt)
+                  Telefon (Mobil)
                 </p>
                 <a
                   href="tel:+4917662988297"
@@ -97,7 +97,18 @@ export default function Impressum() {
                 >
                   +49 176 62988297
                 </a>
-                <p className="text-xs text-muted-foreground mt-2">Montag–Freitag: 9:00–18:00 Uhr</p>
+              </div>
+              {/* Telefon Festnetz */}
+              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0 bg-primary/5 p-4 rounded">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-2">
+                  Telefon (Festnetz)
+                </p>
+                <a
+                  href="tel:+4956849227808"
+                  className="text-2xl font-black text-primary hover:text-primary/80 transition block"
+                >
+                  +49 5684 9227808
+                </a>
               </div>
 
               {/* E-Mail */}
@@ -136,8 +147,18 @@ export default function Impressum() {
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
                   Steuernummer
                 </p>
-                <p className="text-foreground font-bold text-lg">
+                <p className="text-foreground font-black text-2xl font-mono tracking-wider">
                   024 862 30956
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">Finanzamt Fritzlar-Homberg, Hessen</p>
+              </div>
+              {/* USt-ID Hinweis */}
+              <div className="border-b border-border/50 pb-4 last:border-b-0 last:pb-0">
+                <p className="text-xs font-semibold text-primary uppercase tracking-wider mb-1">
+                  Umsatzsteuer-Identifikationsnummer
+                </p>
+                <p className="text-foreground text-sm">
+                  Nicht vorhanden — Kleinunternehmerregelung gemäß § 19 UStG
                 </p>
               </div>
             </div>

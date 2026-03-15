@@ -164,7 +164,7 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
             <div className="border-t border-border pt-8">
               <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
                 <p className="text-xs text-muted-foreground">
-                  © 2026 RUDEN TRANSPORT. Alle Rechte vorbehalten.
+                  © 2026 RUDEN TRANSPORT. Alle Rechte vorbehalten. — v20260315b
                 </p>
                 <div className="flex gap-4">
                   <a href="#" className="text-muted-foreground hover:text-foreground transition">

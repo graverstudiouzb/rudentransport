@@ -38,6 +38,7 @@
         "url": "https://rudentransport.com",
         "areaServed": "DE",
         "telephone": "+49 176 62988297",
+        "faxNumber": "+49 5684 9227808",
         "email": "rudentransport@mail.de",
         "priceRange": "$$"
       }
@@ -47,15 +48,41 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- Service Worker: force-clears browser cache on every visit -->
+    <!-- SW Kill Switch v20260315c: unregisters ALL old SWs, clears ALL caches, forces fresh load -->
     <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').then(function(reg) {
-          reg.update();
-        }).catch(function(err) {
-          console.log('SW registration failed:', err);
-        });
-      }
+      (function() {
+        var BUILD = 'v20260315c';
+        // Step 1: Unregister ALL service workers immediately
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            var unregPromises = registrations.map(function(reg) {
+              console.log('[SW-KILL] Unregistering:', reg.scope);
+              return reg.unregister();
+            });
+            return Promise.all(unregPromises);
+          }).then(function() {
+            // Step 2: Clear ALL caches
+            return caches.keys().then(function(keys) {
+              return Promise.all(keys.map(function(k) {
+                console.log('[SW-KILL] Deleting cache:', k);
+                return caches.delete(k);
+              }));
+            });
+          }).then(function() {
+            // Step 3: Register fresh SW
+            return navigator.serviceWorker.register('/sw.js?build=' + BUILD);
+          }).then(function(reg) {
+            reg.update();
+            navigator.serviceWorker.addEventListener('message', function(event) {
+              if (event.data && event.data.type === 'CACHE_CLEARED') {
+                window.location.reload(true);
+              }
+            });
+          }).catch(function(err) {
+            console.log('[SW-KILL] Error:', err);
+          });
+        }
+      })();
     </script>
     <script
       defer
