@@ -106,10 +106,10 @@ export default function Impressum() {
                   E-Mail (Direktkontakt)
                 </p>
                 <a
-                  href="mailto:b171071@yandex.ru"
+                  href="mailto:rudentransport@mail.de"
                   className="text-lg font-bold text-primary hover:text-primary/80 transition break-all"
                 >
-                  b171071@yandex.ru
+                  rudentransport@mail.de
                 </a>
               </div>
             </div>
@@ -160,7 +160,7 @@ export default function Impressum() {
                 <p className="text-foreground">Mittelstr. 19, 34621 Frielendorf</p>
                 <p className="text-foreground">Deutschland</p>
                 <p className="text-foreground">Tel.: <a href="tel:+4917662988297" className="text-primary hover:underline">+49 176 62988297</a></p>
-                <p className="text-foreground">E-Mail: <a href="mailto:b171071@yandex.ru" className="text-primary hover:underline">b171071@yandex.ru</a></p>
+                <p className="text-foreground">E-Mail: <a href="mailto:rudentransport@mail.de" className="text-primary hover:underline">rudentransport@mail.de</a></p>
               </div>
             </div>
           </section>

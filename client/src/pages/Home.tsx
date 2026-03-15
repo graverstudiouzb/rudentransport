@@ -472,7 +472,7 @@ export default function Home() {
                 <Mail className="h-6 w-6 text-primary flex-shrink-0" />
                 <div>
                   <p className="text-xs text-muted-foreground uppercase tracking-wider">E-Mail</p>
-                  <a href="mailto:b171071@yandex.ru" className="font-semibold text-foreground hover:text-primary transition">b171071@yandex.ru</a>
+                  <a href="mailto:rudentransport@mail.de" className="font-semibold text-foreground hover:text-primary transition">rudentransport@mail.de</a>
                 </div>
               </div>
             </div>
@@ -533,7 +533,7 @@ export default function Home() {
                   <a href="tel:+4917662988297" className="hover:text-foreground transition">+49 176 62988297</a>
                 </p>
                 <p>
-                  <a href="mailto:b171071@yandex.ru" className="hover:text-foreground transition">b171071@yandex.ru</a>
+                  <a href="mailto:rudentransport@mail.de" className="hover:text-foreground transition">rudentransport@mail.de</a>
                 </p>
                 <p className="pt-2 text-xs">
                   Mo–Sa: 07:00–20:00 Uhr<br />

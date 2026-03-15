@@ -181,10 +181,10 @@ export default function Contact() {
                         Email
                       </h3>
                       <a
-                        href="mailto:b171071@yandex.ru"
+                        href="mailto:rudentransport@mail.de"
                         className="text-muted-foreground hover:text-foreground transition"
                       >
-                        b171071@yandex.ru
+                        rudentransport@mail.de
                       </a>
                     </div>
                   </div>

@@ -132,8 +132,8 @@ export default function Layout({ children, showFooter = true }: LayoutProps) {
                   </li>
                   <li className="flex items-start gap-2">
                     <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                    <a href="mailto:b171071@yandex.ru" className="hover:text-foreground transition">
-                      b171071@yandex.ru
+                    <a href="mailto:rudentransport@mail.de" className="hover:text-foreground transition">
+                      rudentransport@mail.de
                     </a>
                   </li>
                 </ul>

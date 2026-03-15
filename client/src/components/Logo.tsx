@@ -1,7 +1,7 @@
 /**
- * RUDEN TRANSPORT Logo Component
- * Design: RT monogram (cyan gradient on dark rounded square) + RUDEN TRANSPORT text
- * Color scheme: #00e5ff cyan + white text, matching site dark theme
+ * RUDEN TRANSPORT Logo Component — Variante 2
+ * Design: Cyan rounded square with dark "RT" letters + RUDEN TRANSPORT text
+ * Color scheme: #00e5ff cyan block, #0d1117 dark text inside
  */
 
 interface LogoProps {
@@ -21,7 +21,7 @@ export default function Logo({ size = "md", showText = true, className = "" }: L
 
   return (
     <div className={`flex items-center ${s.gap} ${className}`}>
-      {/* RT Monogram Icon */}
+      {/* RT Cyan Block Icon */}
       <svg
         width={s.icon}
         height={s.icon}
@@ -31,35 +31,26 @@ export default function Logo({ size = "md", showText = true, className = "" }: L
         className="flex-shrink-0"
       >
         <defs>
-          <linearGradient id="rt-cg" x1="0" y1="64" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+          <linearGradient id="rt-bg" x1="0" y1="64" x2="64" y2="0" gradientUnits="userSpaceOnUse">
             <stop offset="0%" stopColor="#00b8d4" />
             <stop offset="100%" stopColor="#00e5ff" />
           </linearGradient>
-          <linearGradient id="rt-ag" x1="32" y1="40" x2="56" y2="4" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#00e5ff" />
-            <stop offset="100%" stopColor="#80ffff" />
-          </linearGradient>
         </defs>
 
-        {/* Dark rounded square background */}
-        <rect x="0" y="0" width="64" height="64" rx="12" fill="#0d1117" stroke="#1c2535" strokeWidth="1" />
+        {/* Cyan rounded square */}
+        <rect x="0" y="0" width="64" height="64" rx="14" fill="url(#rt-bg)" />
 
-        {/* R letter - main body */}
+        {/* R letter */}
         <path
-          d="M12 52 L12 12 L30 12 C36 12 40 14.5 42 18 C44 21.5 43.5 26 40 29 L38.5 30.2 L46 52 L39 52 L32 32 L19 32 L19 52 Z M19 18 L19 27 L29 27 C33 27 35.5 24.5 36 21.5 C36.5 18.5 34.5 18 30 18 Z"
-          fill="url(#rt-cg)"
+          d="M11 50 L11 14 L26 14 C30.5 14 34 15.5 36 18 C38 20.5 38 24 36 27 C34.5 29.2 32 30.5 29 31 L37 50 L31 50 L23.5 31.5 L17.5 31.5 L17.5 50 Z M17.5 19 L17.5 27 L25.5 27 C28.5 27 30.5 26 31.5 24 C32.5 22 32 20 30 19.2 C29 18.8 27.5 19 25.5 19 Z"
+          fill="#0d1117"
         />
 
-        {/* Arrow swoosh - dynamic upward motion */}
+        {/* T letter */}
         <path
-          d="M34 28 L44 16 L52 16 L52 10 L46 10 L46 14 L36 26 Z"
-          fill="url(#rt-ag)"
-          opacity="0.9"
+          d="M36 14 L55 14 L55 19.5 L48.5 19.5 L48.5 50 L42.5 50 L42.5 19.5 L36 19.5 Z"
+          fill="#0d1117"
         />
-
-        {/* Arrow tip */}
-        <polygon points="48,10 56,10 52,18 46,18" fill="#00e5ff" />
-        <polygon points="52,10 56,10 56,14" fill="#ffffff" opacity="0.3" />
       </svg>
 
       {/* Text */}
@@ -84,6 +75,5 @@ export default function Logo({ size = "md", showText = true, className = "" }: L
 
 /**
  * Standalone SVG icon for favicon / og:image usage
- * Export as data URL for use in meta tags
  */
-export const logoSvgDataUrl = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><defs><linearGradient id="cg" x1="0" y1="64" x2="64" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00b8d4"/><stop offset="100%" stop-color="#00e5ff"/></linearGradient><linearGradient id="ag" x1="32" y1="40" x2="56" y2="4" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00e5ff"/><stop offset="100%" stop-color="#80ffff"/></linearGradient></defs><rect x="0" y="0" width="64" height="64" rx="12" fill="#0d1117" stroke="#1c2535" stroke-width="1"/><path d="M12 52 L12 12 L30 12 C36 12 40 14.5 42 18 C44 21.5 43.5 26 40 29 L38.5 30.2 L46 52 L39 52 L32 32 L19 32 L19 52 Z M19 18 L19 27 L29 27 C33 27 35.5 24.5 36 21.5 C36.5 18.5 34.5 18 30 18 Z" fill="url(#cg)"/><path d="M34 28 L44 16 L52 16 L52 10 L46 10 L46 14 L36 26 Z" fill="url(#ag)" opacity="0.9"/><polygon points="48,10 56,10 52,18 46,18" fill="#00e5ff"/><polygon points="52,10 56,10 56,14" fill="#fff" opacity="0.3"/></svg>`)}`;
+export const logoSvgDataUrl = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none"><defs><linearGradient id="bg" x1="0" y1="64" x2="64" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#00b8d4"/><stop offset="100%" stop-color="#00e5ff"/></linearGradient></defs><rect width="64" height="64" rx="14" fill="url(#bg)"/><path d="M11 50 L11 14 L26 14 C30.5 14 34 15.5 36 18 C38 20.5 38 24 36 27 C34.5 29.2 32 30.5 29 31 L37 50 L31 50 L23.5 31.5 L17.5 31.5 L17.5 50 Z M17.5 19 L17.5 27 L25.5 27 C28.5 27 30.5 26 31.5 24 C32.5 22 32 20 30 19.2 C29 18.8 27.5 19 25.5 19 Z" fill="#0d1117"/><path d="M36 14 L55 14 L55 19.5 L48.5 19.5 L48.5 50 L42.5 50 L42.5 19.5 L36 19.5 Z" fill="#0d1117"/></svg>`)}`;

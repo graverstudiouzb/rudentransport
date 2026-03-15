@@ -14,7 +14,7 @@ export const SEO_CONFIG = {
   },
   contact: {
     phone: "+49 176 62988297",
-    email: "b171071@yandex.ru",
+    email: "rudentransport@mail.de",
     address: "[Adresse wird noch eingegeben]",
   },
 };

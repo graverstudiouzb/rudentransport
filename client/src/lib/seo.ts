@@ -34,7 +34,7 @@ export const seoConfig = {
     url: "https://rudentransport.com",
     areaServed: "DE",
     telephone: "+49 176 62988297",
-    email: "b171071@yandex.ru",
+    email: "rudentransport@mail.de",
     priceRange: "$$",
     image: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663376218565/lyIoXwnfoWBiatqK.webp",
     address: {
@@ -112,7 +112,7 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: "RUDEN TRANSPORT",
     url: "https://rudentransport.com",
-    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663439302321/STPyT28eQ2E77WJUVeLAmp/ruden_logo_icon_9d619a40.png",
+    logo: "https://d2xsxph8kpxj0f.cloudfront.net/310519663439302321/STPyT28eQ2E77WJUVeLAmp/ruden_logo_v2_a71b5668.png",
     description:
       "Spezialtransporte für komplexe Zugänge in Deutschland",
     sameAs: [],
@@ -120,7 +120,7 @@ export function generateOrganizationSchema() {
       "@type": "ContactPoint",
       contactType: "Customer Service",
       telephone: "+49 176 62988297",
-      email: "b171071@yandex.ru",
+      email: "rudentransport@mail.de",
     },
   };
 }

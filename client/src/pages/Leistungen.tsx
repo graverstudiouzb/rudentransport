@@ -363,7 +363,7 @@ export default function Leistungen() {
               <h4 className="font-bold mb-4 text-foreground">Kontakt</h4>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p><a href="tel:+4917662988297" className="hover:text-foreground transition">+49 176 62988297</a></p>
-                <p><a href="mailto:b171071@yandex.ru" className="hover:text-foreground transition">b171071@yandex.ru</a></p>
+                <p><a href="mailto:rudentransport@mail.de" className="hover:text-foreground transition">rudentransport@mail.de</a></p>
                 <p className="pt-2 text-xs">Mo–Sa: 07:00–20:00 Uhr<br />Notfälle: 24/7 erreichbar</p>
               </div>
             </div>
